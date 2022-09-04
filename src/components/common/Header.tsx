@@ -3,6 +3,7 @@ import HeaderLink from "./HeaderLink";
 import styled from "styled-components";
 import logo from "../../images/my face.png";
 import { colors } from "../../color-theme";
+import { useLocation } from "react-router-dom";
 
 const HEADER_HEIGHT_PX = screen.height / 12;
 
@@ -28,13 +29,23 @@ const LinkContainer = styled.div`
   margin-left: 50px;
 `;
 
-export const Header: React.FC<{ currentPage: string }> = (props) => {
+export const Header: React.FC = () => {
+  const location = useLocation();
+  const props = { currentPage: location.pathname };
   return (
     <HeaderDiv>
-      <HeaderLink currentPage="" to="/" label={<HeaderImg src={logo} />} />
+      <HeaderLink
+        currentPage={props.currentPage}
+        to="/"
+        label={<HeaderImg src={logo} />}
+      />
       <ButtonsOnButton>
         <LinkContainer>
-          <HeaderLink currentPage={props.currentPage} to="/" label="Home" />
+          <HeaderLink
+            currentPage={props.currentPage}
+            to="/resume"
+            label="Résumé"
+          />
           <HeaderLink
             currentPage={props.currentPage}
             to="/about"
