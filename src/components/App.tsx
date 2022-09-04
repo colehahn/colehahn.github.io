@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import "../App.css";
-import Header from "./Header";
-import Footer from "./Footer";
+import Footer from "./common/Footer";
 import Content from "./Content";
 
 const AppDiv = styled.div`
@@ -11,10 +10,9 @@ const AppDiv = styled.div`
   flex-direction: column;
 `;
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <AppDiv>
-      <Header />
       <Content />
       <Footer />
     </AppDiv>
