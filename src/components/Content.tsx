@@ -13,7 +13,12 @@ const padding = screen.width / 20;
 
 const ContentDiv = styled.div`
   flex-grow: 1;
-  background-color: ${colors.background};
+  background: linear-gradient(
+    lightgray 0%,
+    ${colors.background} 10%,
+    ${colors.background} 90%,
+    lightgray 100%
+  );
   padding-left: ${padding}px;
   padding-right: ${padding}px;
 
@@ -25,18 +30,22 @@ const ContentDiv = styled.div`
 `;
 
 export const Content: React.FC = () => {
+  // https://stackoverflow.com/questions/61692675/react-spring-how-to-chain-an-animation-in-a-child-component-after-a-parent-com
+  const [animating, setAnimating] = React.useState(false);
   const location = useLocation();
   const transitions = useTransition(location, {
     from: { position: "absolute" as any, opacity: 0 },
     enter: { opacity: 1 },
     leave: { opacity: 0 },
+    onStart: () => setAnimating(true),
+    onRest: () => setAnimating(false),
   });
   return (
     <ContentDiv>
       {transitions((styles, item) => (
         <animated.div style={styles}>
           <Routes location={item}>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home routeAnimating={animating} />} />
             <Route path="/about" element={<About />} />
             <Route path="/links" element={<Links />} />
             <Route path="/resume" element={<Resume />} />

@@ -8,7 +8,7 @@ import { useLocation } from "react-router-dom";
 const HEADER_HEIGHT_PX = screen.height / 12;
 
 const HeaderDiv = styled.div`
-  background: linear-gradient(${colors.primary} 90%, ${colors.background} 100%);
+  background: linear-gradient(${colors.primary} 90%, lightgray 100%);
   height: ${HEADER_HEIGHT_PX}px;
   position: relative;
   display: flex;

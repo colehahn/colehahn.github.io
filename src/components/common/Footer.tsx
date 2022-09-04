@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { colors } from "../../color-theme";
 
 const FooterDiv = styled.div`
-  background: linear-gradient(${colors.background} 0%, ${colors.primary} 10%);
+  background: linear-gradient(lightgray 0%, ${colors.primary} 10%);
   text-align: center;
 `;
 

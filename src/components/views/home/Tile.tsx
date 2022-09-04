@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { colors } from "../../../color-theme";
 
 const TileDiv = styled.a`
   background-color: lightgray;
@@ -8,6 +9,7 @@ const TileDiv = styled.a`
   margin: 10px;
   border: 3px solid gray;
   border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -15,9 +17,9 @@ const TileDiv = styled.a`
   text-decoration: none;
   color: inherit;
 
-  transition: background-color 300ms;
+  transition: background-color 400ms;
   &:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: ${colors.accent};
     cursor: pointer;
   }
 
