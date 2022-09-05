@@ -15,8 +15,8 @@ const ContentDiv = styled.div`
   flex-grow: 1;
   background: linear-gradient(
     lightgray 0%,
-    ${colors.background} 10%,
-    ${colors.background} 90%,
+    ${colors.background} 20%,
+    ${colors.background} 80%,
     lightgray 100%
   );
   padding-left: ${padding}px;

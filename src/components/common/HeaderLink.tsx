@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { colors } from "../../color-theme";
 
 const StyledLink = styled(Link)`
   //margin: 20px;
@@ -11,14 +12,19 @@ const StyledLink = styled(Link)`
   text-align: center;
   text-decoration: none;
   color: black;
+  border-radius: 50px;
   background-color: ${(props) =>
     (props as any)[`data-currentpage`] === props.to
-      ? `rgba(255, 255, 255, 0.2)`
-      : `transparent`};
+      ? `${colors.accent}`
+      : `rgba(255, 255, 255, 0.2)`};
+  height: max-content;
 
   transition: background-color 300ms;
   &:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: ${(props) =>
+      (props as any)[`data-currentpage`] === props.to
+        ? `${colors.accent}`
+        : `rgba(255, 255, 255, 0.1)`};
   }
 `;
 
