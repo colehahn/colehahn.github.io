@@ -22,10 +22,18 @@ const ContentDiv = styled.div`
   padding-left: ${padding}px;
   padding-right: ${padding}px;
 
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+
   & > * {
+    grid-column-start: 1;
+    grid-row-start: 1;
+
     max-width: ${screen.width * 0.7}px;
     display: block;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 `;
 
@@ -34,7 +42,7 @@ export const Content: React.FC = () => {
   const [animating, setAnimating] = React.useState(false);
   const location = useLocation();
   const transitions = useTransition(location, {
-    from: { position: "absolute" as any, opacity: 0 },
+    from: { opacity: 0 },
     enter: { opacity: 1 },
     leave: { opacity: 0 },
     onStart: () => setAnimating(true),
