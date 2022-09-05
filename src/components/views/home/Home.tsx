@@ -20,7 +20,7 @@ const openInNewTab = (url: string) => {
   }
 };
 
-export const Home: React.FC<{ routeAnimating: boolean }> = (props) => {
+export const Home: React.FC = () => {
   const navigate = useNavigate();
 
   const tiles = [
@@ -47,9 +47,11 @@ export const Home: React.FC<{ routeAnimating: boolean }> = (props) => {
   ];
 
   const transition = useTransition(tiles, {
-    from: { x: 1000, opacity: 0 },
+    from: { x: 100, opacity: 0 },
     enter: { x: 0, opacity: 1 },
     //leave: { x: -1000, opacity: 0 },
+    config: {},
+    delay: 700, //delay needs to be longer than the duration of the route transition in
     trail: 200,
   });
 
@@ -57,10 +59,9 @@ export const Home: React.FC<{ routeAnimating: boolean }> = (props) => {
     <div>
       <p>Welcome to Cole Hahn's personal website.</p>
       <TileGrid>
-        {!props.routeAnimating &&
-          transition((style, item) => (
-            <animated.div style={style}>{item}</animated.div>
-          ))}
+        {transition((style, item) => (
+          <animated.div style={style}>{item}</animated.div>
+        ))}
       </TileGrid>
     </div>
   );

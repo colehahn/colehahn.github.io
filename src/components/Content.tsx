@@ -21,6 +21,7 @@ const ContentDiv = styled.div`
   );
   padding-left: ${padding}px;
   padding-right: ${padding}px;
+  overflow: hidden;
 
   display: grid;
   grid-template-columns: 1fr;
@@ -39,21 +40,18 @@ const ContentDiv = styled.div`
 
 export const Content: React.FC = () => {
   // https://stackoverflow.com/questions/61692675/react-spring-how-to-chain-an-animation-in-a-child-component-after-a-parent-com
-  const [animating, setAnimating] = React.useState(false);
   const location = useLocation();
   const transitions = useTransition(location, {
     from: { opacity: 0 },
     enter: { opacity: 1 },
     leave: { opacity: 0 },
-    onStart: () => setAnimating(true),
-    onRest: () => setAnimating(false),
   });
   return (
     <ContentDiv>
       {transitions((styles, item) => (
         <animated.div style={styles}>
           <Routes location={item}>
-            <Route path="/" element={<Home routeAnimating={animating} />} />
+            <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/links" element={<Links />} />
             <Route path="/resume" element={<Resume />} />
