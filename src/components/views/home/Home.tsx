@@ -57,7 +57,7 @@ export const Home: React.FC = () => {
 
   return (
     <div>
-      <p>Welcome to Cole Hahn's personal website.</p>
+      <p>Welcome to my personal website!</p>
       <TileGrid>
         {transition((style, item) => (
           <animated.div style={style}>{item}</animated.div>

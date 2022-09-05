@@ -5,7 +5,8 @@ import styled from "styled-components";
 const StyledLink = styled(Link)`
   //margin: 20px;
   display: inline-block;
-  width: 110px;
+  padding-left: 20px;
+  padding-right: 20px;
   line-height: 40px; // vertically align text
   text-align: center;
   text-decoration: none;

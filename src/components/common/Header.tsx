@@ -9,10 +9,20 @@ const HEADER_HEIGHT_PX = screen.height / 12;
 
 const HeaderDiv = styled.div`
   background: linear-gradient(${colors.primary} 90%, lightgray 100%);
-  height: ${HEADER_HEIGHT_PX}px;
+  min-height: ${HEADER_HEIGHT_PX}px;
   position: relative;
   display: flex;
   flex-direction: row;
+`;
+
+const ImgAndTitle = styled.div`
+  display: flex;
+  line-height: 30px !important;
+
+  & > * {
+    margin: 0px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+  }
 `;
 
 const HeaderImg = styled.img`
@@ -37,7 +47,16 @@ export const Header: React.FC = () => {
       <HeaderLink
         currentPage={props.currentPage}
         to="/"
-        label={<HeaderImg src={logo} />}
+        label={
+          <ImgAndTitle>
+            <HeaderImg src={logo} />
+            <h2>
+              Cole
+              <br />
+              Hahn
+            </h2>
+          </ImgAndTitle>
+        }
       />
       <ButtonsOnButton>
         <LinkContainer>
