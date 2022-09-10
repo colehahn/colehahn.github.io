@@ -1,7 +1,7 @@
 import React from "react";
 import HeaderLink from "./HeaderLink";
 import styled from "styled-components";
-import logo from "../../images/my face.png";
+import logo from "../../assets/images/my face.png";
 import { colors } from "../../color-theme";
 import { useLocation } from "react-router-dom";
 

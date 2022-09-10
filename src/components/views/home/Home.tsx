@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { useTransition, animated } from "react-spring";
-import { FaGithub, FaLinkedin, FaFilePdf } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaFileAlt } from "react-icons/fa";
 import Tile from "./Tile";
 
 //TODO: make tiles animate onto screen
@@ -41,7 +41,7 @@ export const Home: React.FC = () => {
     <Tile
       key="resume"
       text="View my resume"
-      icon={<FaFilePdf size="100" />}
+      icon={<FaFileAlt size="100" />}
       onClick={(e) => navigate("/resume")}
     />,
   ];
