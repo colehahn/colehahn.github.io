@@ -1374,7 +1374,6 @@ select {
   right: 0;
   z-index: 9999;
   cursor: default;
-  display: none;
 }
 
 #toolbarContainer {
