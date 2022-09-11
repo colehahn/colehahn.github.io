@@ -5,8 +5,6 @@ import { useTransition, animated } from "react-spring";
 import { FaGithub, FaLinkedin, FaFileAlt } from "react-icons/fa";
 import Tile from "./Tile";
 
-//TODO: make tiles animate onto screen
-
 const TileGrid = styled.div`
   display: flex;
   flex-wrap: wrap;
