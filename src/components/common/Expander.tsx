@@ -11,23 +11,42 @@ issue with getting NaN on first animation, but it seems to work!
 we should also animate the little arrow turning down by getting rid of it and adding our own
 */
 
-const StyledDetails = styled.details`
-  :not([open]) summary {
-    background-color: lightgray;
-  }
-  & summary {
-    background-color: gray;
-  }
+const borderRadius = "1.5em";
 
-  transition: all 0.3s;
+const StyledDetails = styled.details`
+  // height controlled with spring
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  margin-top: 0.4em;
+  border-radius: ${borderRadius};
 `;
 
-const StyledSummary = styled.summary`
+const StyledSummary = styled(animated.summary)`
+  // background-color controlled with spring
+  border-radius: ${borderRadius};
+  padding-left: 1em;
   cursor: pointer;
+  display: flex;
+  justify-content: space-between;
 
   & > * {
-    display: inline;
+    margin: 0;
   }
+
+  ::marker {
+    color: transparent !important;
+  }
+`;
+
+const ArrowDiv = styled(animated.div)`
+  // rotation controlled by spring
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.5em;
+  width: 1.5em;
+  user-select: none;
 `;
 
 export const Expander: React.FC<{
@@ -52,15 +71,27 @@ export const Expander: React.FC<{
     height: contentHeight === -1 ? "auto" : isOpen ? contentHeight : 0,
   });
 
+  const arrowStyle = useSpring({
+    transform: isOpen ? "rotate(180deg)" : "rotate(270deg)",
+  });
+
+  const summaryStyle = useSpring({
+    "background-color": isOpen ? "rgba(0,0,0,0.1)" : "rgba(0,0,0,0.2)",
+  });
+
   return (
     <StyledDetails open>
       <StyledSummary
+        style={
+          summaryStyle as any /*"as any" is a gross hack that shouldn't be needed*/
+        }
         onClick={(e) => {
           e.preventDefault();
           setOpen(!isOpen);
         }}
       >
         {props.summary}
+        <ArrowDiv style={arrowStyle}>&#9650;</ArrowDiv>
       </StyledSummary>
       <animated.div ref={reference} style={springStyle}>
         {props.content}

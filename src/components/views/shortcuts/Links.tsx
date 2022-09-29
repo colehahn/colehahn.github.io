@@ -5,8 +5,7 @@ export const Links: React.FC = () => {
   return (
     <div>
       <p>
-        This page isn't really meant to be public facing... I just use it to
-        keep track of links that need often, usually for classes
+        I use this page to keep track of all the shortcuts I need for school.
       </p>
       <Expander
         open={true}
@@ -263,6 +262,9 @@ export const Links: React.FC = () => {
           </div>
         }
       />
+      <br />
+      <br />
+      <br />
     </div>
   );
 };
