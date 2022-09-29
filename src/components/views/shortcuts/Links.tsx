@@ -1,5 +1,19 @@
 import React from "react";
-import Expander from "../../common/Expander";
+import styled from "styled-components";
+import MainLink from "./MainLink";
+import Expander from "../../common/expander/Expander";
+import ExpanderList from "../../common/expander/ExpanderList";
+
+const MainLinkContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  // mimic Expander Style...
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 1.5em;
+`;
 
 export const Links: React.FC = () => {
   return (
@@ -7,264 +21,301 @@ export const Links: React.FC = () => {
       <p>
         I use this page to keep track of all the shortcuts I need for school.
       </p>
-      <Expander
-        open={true}
-        summary={<h1>Autumn 2022 shortcuts</h1>}
-        content={
-          <div>
-            <h2>CSE 446</h2>
-            <ul>
-              <li>
-                <a
-                  href="https://courses.cs.washington.edu/courses/cse446/22au/"
-                  target="_blank"
-                >
-                  course website
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://edstem.org/us/courses/29842/discussion/"
-                  target="_blank"
-                >
-                  ed discussion
-                </a>
-              </li>
-              <li>
-                <a href="https://www.overleaf.com/project" target="_blank">
-                  Overleaf
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.gradescope.com/courses/451141"
-                  target="_blank"
-                >
-                  Gradescope
-                </a>
-              </li>
-              <li>
-                <a href="https://canvas.uw.edu/courses/1579015" target="_blank">
-                  Canvas
-                </a>
-              </li>
-            </ul>
-            <br /> <hr />
-            <h2>ESS 101</h2>
-            <ul>
-              <li>
-                <a href="https://canvas.uw.edu/courses/1580206" target="_blank">
-                  canvas
-                </a>
-              </li>
-              <li>links to specific canvas pages?</li>
-            </ul>
-            <br /> <hr />
-            <h2>CSE 474</h2>
-            <ul>
-              <li>
-                <a href="https://canvas.uw.edu/courses/1578928" target="_blank">
-                  Canvas
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://edstem.org/us/courses/29568/discussion/"
-                  target="_blank"
-                >
-                  ed discussion
-                </a>
-              </li>
-              <li>
-                <a href="https://www.zybooks.com/" target="_blank">
-                  Zybooks
-                </a>
-              </li>
-            </ul>
-          </div>
-        }
-      />
 
-      <Expander
-        summary={<h1>Spring 2021 shortcuts</h1>}
-        content={
-          <div>
-            <h2>CSE 341 (TA)</h2>
-            <ul>
-              <li>
-                <a
-                  href="https://courses.cs.washington.edu/courses/cse341/22sp/"
-                  target="_blank"
-                >
-                  website
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.gradescope.com/courses/382080"
-                  target="_blank"
-                >
-                  gradescope
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://gitlab.cs.washington.edu/cse341-22sp"
-                  target="_blank"
-                >
-                  project gitlab
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://drive.google.com/drive/folders/1TniC9uSaaOVKMAptCZv-9Os5StWTrt3g?usp=sharing"
-                  target="_blank"
-                >
-                  All publicly available Google drive resources (slides, etc.)
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://uw.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=47768993-5ff9-4697-989e-adde00f3e8d7"
-                  target="_blank"
-                >
-                  panopto
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://edstem.org/us/courses/21011/discussion/"
-                  target="_blank"
-                >
-                  ed discussion
-                </a>
-              </li>
-              <li>
-                <a href="https://discord.gg/8QggdQTZEf" target="_blank">
-                  discord
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://mattermost.cs.washington.edu/cse341-22sp/channels/town-square"
-                  target="_blank"
-                >
-                  mattermost
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://wd5.myworkday.com/uw/d/home.htmld"
-                  target="_blank"
-                >
-                  workday
-                </a>
-              </li>
-            </ul>
-            <br /> <hr />
-            <h2>CSE 403</h2>
-            <ul>
-              <li>
-                <a
-                  href="https://courses.cs.washington.edu/courses/cse403/22sp/"
-                  target="_blank"
-                >
-                  website
-                </a>
-              </li>
-              <li>
-                <a href="https://canvas.uw.edu/courses/1546993" target="_blank">
-                  canvas
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/colehahn/Study-Buddy"
-                  target="_blank"
-                >
-                  github repo
-                </a>
-              </li>
-              <li>
-                <a href="https://cse403-sp22.slack.com/" target="_blank">
-                  slack
-                </a>
-              </li>
-            </ul>
-            <br /> <hr />
-            <h2>CSE 444</h2>
-            <ul>
-              <li>
-                <a
-                  href="https://courses.cs.washington.edu/courses/cse444/22sp/"
-                  target="_blank"
-                >
-                  website
-                </a>
-              </li>
-              <li>
-                <a href="https://edstem.org/us/courses/21016" target="_blank">
-                  ed discussion
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.gradescope.com/courses/380472"
-                  target="_blank"
-                >
-                  gradescope
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://gitlab.cs.washington.edu/cse444-22sp/simple-db-colehahn"
-                  target="_blank"
-                >
-                  gitlab
-                </a>
-              </li>
-            </ul>
-            <br /> <hr />
-            <h2>CSE 371</h2>
-            <ul>
-              <li>
-                <a href="https://canvas.uw.edu/courses/1546981" target="_blank">
-                  canvas
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://edstem.org/us/courses/21037/discussion/"
-                  target="_blank"
-                >
-                  ed discussion
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.gradescope.com/courses/377411"
-                  target="_blank"
-                >
-                  gradescope
-                </a>
-              </li>
-              <li>
-                <a href="" target="_blank">
-                  gitlab
-                </a>
-              </li>
-              <li>
-                <a href="https://uw.labsland.com/" target="_blank">
-                  labsland
-                </a>
-              </li>
-            </ul>
-          </div>
-        }
-      />
-      <br />
-      <br />
-      <br />
+      <MainLinkContainer>
+        <MainLink
+          url="http://my.uw.edu/"
+          text="MyUW"
+          color="rgba(51,0,111, 0.5)"
+        />
+        <MainLink
+          url="http://mail.google.com/mail/u/0/#inbox"
+          text="Gmail"
+          color="rgba(234, 67, 53, 0.7)"
+        />
+        <MainLink
+          url="https://www.hulu.com/my-stuff/"
+          text="Hulu"
+          color="rgba(28, 231, 131, 0.7)"
+        />
+        <MainLink
+          url="https://play.google.com/console/u/0/developers/8612040722949104962/app-list?pli=1"
+          text="Play Console"
+          color="rgba(59, 204, 255, 0.7)"
+        />
+      </MainLinkContainer>
+
+      <ExpanderList defaultOpen={0}>
+        <Expander
+          summary={<h1>Autumn 2022 shortcuts</h1>}
+          content={
+            <div>
+              <h2>CSE 446</h2>
+              <ul>
+                <li>
+                  <a
+                    href="https://courses.cs.washington.edu/courses/cse446/22au/"
+                    target="_blank"
+                  >
+                    course website
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://edstem.org/us/courses/29842/discussion/"
+                    target="_blank"
+                  >
+                    ed discussion
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.overleaf.com/project" target="_blank">
+                    Overleaf
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.gradescope.com/courses/451141"
+                    target="_blank"
+                  >
+                    Gradescope
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://canvas.uw.edu/courses/1579015"
+                    target="_blank"
+                  >
+                    Canvas
+                  </a>
+                </li>
+              </ul>
+              <br /> <hr />
+              <h2>ESS 101</h2>
+              <ul>
+                <li>
+                  <a
+                    href="https://canvas.uw.edu/courses/1580206"
+                    target="_blank"
+                  >
+                    canvas
+                  </a>
+                </li>
+                <li>links to specific canvas pages?</li>
+              </ul>
+              <br /> <hr />
+              <h2>CSE 474</h2>
+              <ul>
+                <li>
+                  <a
+                    href="https://canvas.uw.edu/courses/1578928"
+                    target="_blank"
+                  >
+                    Canvas
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://edstem.org/us/courses/29568/discussion/"
+                    target="_blank"
+                  >
+                    ed discussion
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.zybooks.com/" target="_blank">
+                    Zybooks
+                  </a>
+                </li>
+              </ul>
+            </div>
+          }
+        />
+
+        <Expander
+          summary={<h1>Spring 2021 shortcuts</h1>}
+          content={
+            <div>
+              <h2>CSE 341 (TA)</h2>
+              <ul>
+                <li>
+                  <a
+                    href="https://courses.cs.washington.edu/courses/cse341/22sp/"
+                    target="_blank"
+                  >
+                    website
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.gradescope.com/courses/382080"
+                    target="_blank"
+                  >
+                    gradescope
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://gitlab.cs.washington.edu/cse341-22sp"
+                    target="_blank"
+                  >
+                    project gitlab
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://drive.google.com/drive/folders/1TniC9uSaaOVKMAptCZv-9Os5StWTrt3g?usp=sharing"
+                    target="_blank"
+                  >
+                    All publicly available Google drive resources (slides, etc.)
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://uw.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=47768993-5ff9-4697-989e-adde00f3e8d7"
+                    target="_blank"
+                  >
+                    panopto
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://edstem.org/us/courses/21011/discussion/"
+                    target="_blank"
+                  >
+                    ed discussion
+                  </a>
+                </li>
+                <li>
+                  <a href="https://discord.gg/8QggdQTZEf" target="_blank">
+                    discord
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://mattermost.cs.washington.edu/cse341-22sp/channels/town-square"
+                    target="_blank"
+                  >
+                    mattermost
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://wd5.myworkday.com/uw/d/home.htmld"
+                    target="_blank"
+                  >
+                    workday
+                  </a>
+                </li>
+              </ul>
+              <br /> <hr />
+              <h2>CSE 403</h2>
+              <ul>
+                <li>
+                  <a
+                    href="https://courses.cs.washington.edu/courses/cse403/22sp/"
+                    target="_blank"
+                  >
+                    website
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://canvas.uw.edu/courses/1546993"
+                    target="_blank"
+                  >
+                    canvas
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/colehahn/Study-Buddy"
+                    target="_blank"
+                  >
+                    github repo
+                  </a>
+                </li>
+                <li>
+                  <a href="https://cse403-sp22.slack.com/" target="_blank">
+                    slack
+                  </a>
+                </li>
+              </ul>
+              <br /> <hr />
+              <h2>CSE 444</h2>
+              <ul>
+                <li>
+                  <a
+                    href="https://courses.cs.washington.edu/courses/cse444/22sp/"
+                    target="_blank"
+                  >
+                    website
+                  </a>
+                </li>
+                <li>
+                  <a href="https://edstem.org/us/courses/21016" target="_blank">
+                    ed discussion
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.gradescope.com/courses/380472"
+                    target="_blank"
+                  >
+                    gradescope
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://gitlab.cs.washington.edu/cse444-22sp/simple-db-colehahn"
+                    target="_blank"
+                  >
+                    gitlab
+                  </a>
+                </li>
+              </ul>
+              <br /> <hr />
+              <h2>CSE 371</h2>
+              <ul>
+                <li>
+                  <a
+                    href="https://canvas.uw.edu/courses/1546981"
+                    target="_blank"
+                  >
+                    canvas
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://edstem.org/us/courses/21037/discussion/"
+                    target="_blank"
+                  >
+                    ed discussion
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.gradescope.com/courses/377411"
+                    target="_blank"
+                  >
+                    gradescope
+                  </a>
+                </li>
+                <li>
+                  <a href="" target="_blank">
+                    gitlab
+                  </a>
+                </li>
+                <li>
+                  <a href="https://uw.labsland.com/" target="_blank">
+                    labsland
+                  </a>
+                </li>
+              </ul>
+            </div>
+          }
+        />
+      </ExpanderList>
     </div>
   );
 };

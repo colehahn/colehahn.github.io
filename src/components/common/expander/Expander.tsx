@@ -58,6 +58,7 @@ export const Expander: React.FC<{
   summary: ReactNode;
   content: ReactNode;
   open?: boolean;
+  onClick?: any; // optional, used by ExpanderList
 }> = (props) => {
   const reference = React.useRef<HTMLDivElement>(null);
 
@@ -70,6 +71,10 @@ export const Expander: React.FC<{
     }
     setOpen(props.open || false);
   }, []);
+
+  React.useEffect(() => {
+    setOpen(props.open || false);
+  }, [props.open]);
 
   const springStyle = useSpring({
     overflow: "hidden",
@@ -92,7 +97,7 @@ export const Expander: React.FC<{
         }
         onClick={(e) => {
           e.preventDefault();
-          setOpen(!isOpen);
+          props.onClick ? props.onClick() : setOpen(!isOpen);
         }}
       >
         {props.summary}

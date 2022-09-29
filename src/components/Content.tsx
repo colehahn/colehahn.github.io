@@ -33,6 +33,7 @@ const ContentDiv = styled.div`
     grid-row-start: 1;
 
     width: 100%;
+    margin-bottom: 3em;
     // helps with mobile
     max-width: ${screen.width > 1500
       ? `${screen.width * 0.7}px`
