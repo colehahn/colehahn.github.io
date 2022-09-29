@@ -30,7 +30,8 @@ const StyledSummary = styled(animated.summary)`
   justify-content: space-between;
 
   & > * {
-    margin: 0;
+    margin-top: auto;
+    margin-bottom: auto;
   }
 
   ::marker {
@@ -47,6 +48,10 @@ const ArrowDiv = styled(animated.div)`
   font-size: 1.5em;
   width: 1.5em;
   user-select: none;
+`;
+
+const StyledContent = styled(animated.div)`
+  padding-left: 1em;
 `;
 
 export const Expander: React.FC<{
@@ -93,9 +98,9 @@ export const Expander: React.FC<{
         {props.summary}
         <ArrowDiv style={arrowStyle}>&#9650;</ArrowDiv>
       </StyledSummary>
-      <animated.div ref={reference} style={springStyle}>
+      <StyledContent ref={reference} style={springStyle}>
         {props.content}
-      </animated.div>
+      </StyledContent>
     </StyledDetails>
   );
 };

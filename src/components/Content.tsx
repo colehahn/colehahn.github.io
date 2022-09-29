@@ -7,6 +7,7 @@ import About from "./views/about/About";
 import Links from "./views/shortcuts/Links";
 import Error from "./common/Error";
 import Resume from "./views/resume/Resume";
+import Projects from "./views/projects/Projects";
 import { colors } from "../color-theme";
 
 export const padding = screen.width / 20;
@@ -60,6 +61,7 @@ export const Content: React.FC = () => {
             <Route path="/about" element={<About />} />
             <Route path="/links" element={<Links />} />
             <Route path="/resume" element={<Resume />} />
+            <Route path="/projects" element={<Projects />} />
             <Route path="/error" element={<Error />} />
             <Route path="*" element={<Navigate to="/error" replace />} />
           </Routes>
