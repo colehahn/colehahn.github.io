@@ -42,10 +42,8 @@ export const Expander: React.FC<{
 
   React.useEffect(() => {
     if (reference.current) {
-      console.log(reference.current.offsetHeight);
       setContentHeight(reference.current.offsetHeight);
     }
-
     setOpen(props.open || false);
   }, []);
 
@@ -55,14 +53,15 @@ export const Expander: React.FC<{
   });
 
   return (
-    <StyledDetails
-      open
-      onClick={(e) => {
-        e.preventDefault();
-        setOpen(!isOpen);
-      }}
-    >
-      <StyledSummary>{props.summary}</StyledSummary>
+    <StyledDetails open>
+      <StyledSummary
+        onClick={(e) => {
+          e.preventDefault();
+          setOpen(!isOpen);
+        }}
+      >
+        {props.summary}
+      </StyledSummary>
       <animated.div ref={reference} style={springStyle}>
         {props.content}
       </animated.div>

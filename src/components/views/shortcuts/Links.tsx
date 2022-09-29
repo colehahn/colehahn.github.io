@@ -20,7 +20,33 @@ export const Links: React.FC = () => {
                   href="https://courses.cs.washington.edu/courses/cse446/22au/"
                   target="_blank"
                 >
-                  website
+                  course website
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://edstem.org/us/courses/29842/discussion/"
+                  target="_blank"
+                >
+                  ed discussion
+                </a>
+              </li>
+              <li>
+                <a href="https://www.overleaf.com/project" target="_blank">
+                  Overleaf
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.gradescope.com/courses/451141"
+                  target="_blank"
+                >
+                  Gradescope
+                </a>
+              </li>
+              <li>
+                <a href="https://canvas.uw.edu/courses/1579015" target="_blank">
+                  Canvas
                 </a>
               </li>
             </ul>
@@ -28,30 +54,31 @@ export const Links: React.FC = () => {
             <h2>ESS 101</h2>
             <ul>
               <li>
-                <a href="https://canvas.uw.edu/courses/1546993" target="_blank">
+                <a href="https://canvas.uw.edu/courses/1580206" target="_blank">
                   canvas
                 </a>
               </li>
+              <li>links to specific canvas pages?</li>
             </ul>
             <br /> <hr />
             <h2>CSE 474</h2>
             <ul>
               <li>
-                <a
-                  href="https://courses.cs.washington.edu/courses/cse474/22au/"
-                  target="_blank"
-                >
-                  website
+                <a href="https://canvas.uw.edu/courses/1578928" target="_blank">
+                  Canvas
                 </a>
               </li>
               <li>
-                <a href="https://edstem.org/us/courses/" target="_blank">
+                <a
+                  href="https://edstem.org/us/courses/29568/discussion/"
+                  target="_blank"
+                >
                   ed discussion
                 </a>
               </li>
               <li>
-                <a href="https://www.gradescope.com/courses/" target="_blank">
-                  gradescope
+                <a href="https://www.zybooks.com/" target="_blank">
+                  Zybooks
                 </a>
               </li>
             </ul>
