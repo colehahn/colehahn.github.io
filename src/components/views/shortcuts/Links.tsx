@@ -27,21 +27,25 @@ export const Links: React.FC = () => {
           url="http://my.uw.edu/"
           text="MyUW"
           color="rgba(51,0,111, 0.5)"
+          imgSrc="https://my.uw.edu/static/images/favicon.ico"
         />
         <MainLink
           url="http://mail.google.com/mail/u/0/#inbox"
           text="Gmail"
           color="rgba(234, 67, 53, 0.7)"
+          imgSrc="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico"
         />
         <MainLink
           url="https://www.hulu.com/my-stuff/"
           text="Hulu"
           color="rgba(28, 231, 131, 0.7)"
+          imgSrc="//assetshuluimcom-a.akamaihd.net/h3o/icons/favicon.ico.png"
         />
         <MainLink
           url="https://play.google.com/console/u/0/developers/8612040722949104962/app-list?pli=1"
           text="Play Console"
           color="rgba(59, 204, 255, 0.7)"
+          imgSrc="https://www.gstatic.com/images/branding/product/1x/play_devconsole_32dp.png"
         />
       </MainLinkContainer>
 
