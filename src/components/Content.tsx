@@ -48,9 +48,9 @@ export const Content: React.FC = () => {
   // https://stackoverflow.com/questions/61692675/react-spring-how-to-chain-an-animation-in-a-child-component-after-a-parent-com
   const location = useLocation();
   const transitions = useTransition(location, {
-    from: { opacity: 0, position: "static" as any },
-    enter: { opacity: 1, position: "static" as any },
-    leave: { opacity: 0, position: "absolute" as any },
+    from: { opacity: 0 },
+    enter: { opacity: 1 },
+    leave: { opacity: 0 },
     //config: { duration: 10000 },
   });
   return (
