@@ -1,6 +1,7 @@
 import React, { ReactNode } from "react";
 import { animated, useSpring } from "react-spring";
 import styled from "styled-components";
+import useBoop from "../../../hooks/useBoop";
 
 /*
 I started out using <details> and <summary> because this is what I wanted.
@@ -64,6 +65,7 @@ export const Expander: React.FC<{
 
   const [isOpen, setOpen] = React.useState(true); // they all start open so that we can calculate their height
   const [contentHeight, setContentHeight] = React.useState(-1);
+  const [isBoopSpringEnabled, setBoopSpringEnabled] = React.useState(true);
 
   React.useEffect(() => {
     if (reference.current) {
@@ -89,19 +91,32 @@ export const Expander: React.FC<{
     "background-color": isOpen ? "rgba(0,0,0,0.1)" : "rgba(0,0,0,0.2)",
   });
 
+  const [style, trigger] = useBoop({
+    rotation: 10,
+    defaultRotation: isOpen ? 180 : 270,
+    scale: 1.1,
+  });
+
   return (
     <StyledDetails open>
       <StyledSummary
+        onMouseEnter={trigger as any}
         style={
           summaryStyle as any /*"as any" is a gross hack that shouldn't be needed*/
         }
         onClick={(e) => {
           e.preventDefault();
+          setBoopSpringEnabled(false);
+          setTimeout(() => {
+            setBoopSpringEnabled(true);
+          }, 1000);
           props.onClick ? props.onClick() : setOpen(!isOpen);
         }}
       >
         {props.summary}
-        <ArrowDiv style={arrowStyle}>&#9650;</ArrowDiv>
+        <ArrowDiv style={isBoopSpringEnabled ? (style as any) : arrowStyle}>
+          &#9650;
+        </ArrowDiv>
       </StyledSummary>
       <StyledContent ref={reference} style={springStyle}>
         {props.content}

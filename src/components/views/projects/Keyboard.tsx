@@ -1,4 +1,25 @@
 import React from "react";
+import styled from "styled-components";
+import acrylic from "../../../assets/images/keyboard/acrylic.jpg";
+import cut_fail from "../../../assets/images/keyboard/cut_fail.jpg";
+import cutting from "../../../assets/images/keyboard/cutting.gif";
+import cutout from "../../../assets/images/keyboard/cutout.jpg";
+import print_fail from "../../../assets/images/keyboard/print_fail.jpg";
+import print from "../../../assets/images/keyboard/3d_print.jpg";
+import keycaps from "../../../assets/images/keyboard/keycaps.jpg";
+import painted from "../../../assets/images/keyboard/painted.jpg";
+import solder from "../../../assets/images/keyboard/solder.jpg";
+import finished from "../../../assets/images/keyboard/finished.jpg";
+
+const StyledImg = styled.img`
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+`;
 
 export const Keyboard: React.FC = () => {
   return (
@@ -51,7 +72,7 @@ export const Keyboard: React.FC = () => {
         lights, I wanted it to be somewhat translucent. I ended up going with
         3mm smokey-colored acrylic.
       </p>
-      <img src="insert photo of acrylic sheets" width={400} />
+      <StyledImg src={acrylic} />
       <p>
         Once I had this, I had to figure out how to cut it to perfectly match
         the PCB size and shape. Keebio publishes all of their drawings and files
@@ -59,7 +80,7 @@ export const Keyboard: React.FC = () => {
         problem is that I had never used a laser cutter before. I had access to
         some through school though, so I decided to give it a go!
       </p>
-      <img src="a gif of the laser cutter going" width={400} />
+      <StyledImg src={cutting} />
       <p>
         I arranged the drawings onto a sheet the size of the acrylic that I had
         using a technical drawing software called AutoCad, which I had never
@@ -74,7 +95,7 @@ export const Keyboard: React.FC = () => {
         out again, but this time I boosted the power on the laser cutter so that
         I wouldn't make the same mistake again.
       </p>
-      <img src="add photo of cutout cases" width={400} />
+      <StyledImg src={cutout} />
       <p>
         Now that I had my case complete, I needed to add switches to my keyboard
         and put it together!
@@ -130,6 +151,7 @@ export const Keyboard: React.FC = () => {
         so this made for some great practice for me. After this, it was finally
         starting to look like a keyboard, and I just needed keycaps!
       </p>
+      <StyledImg src={solder} />
 
       <h4>Keycaps</h4>
       <p>
@@ -139,6 +161,7 @@ export const Keyboard: React.FC = () => {
         for the sake of making this a true DIY project (and save more money), I
         decided to learn how to use 3-D printers as well.
       </p>
+      <StyledImg src={print_fail} />
       <p>
         Most of the time, when you 3-D print somehting, it is not as small and
         intricate as a single keycap. I had some troubles getting them to print
@@ -147,7 +170,8 @@ export const Keyboard: React.FC = () => {
         separately printed tiny connectors that I glued into each keycap so that
         they could connect to the stem on the switches.
       </p>
-      <img src="photo of keycaps or 3d model. be sure to give credit to original model" />
+      <StyledImg src={print} />
+      {/*TODO:  GIVE CREDIT TO THINGIVERSE GUY*/}
       <p>
         As if that wasn't tedious enough though, I also decided to label each
         keycap with its letter/character, which required me to create a separate
@@ -155,10 +179,10 @@ export const Keyboard: React.FC = () => {
         filled these engravings with white paint, which was EXTREMELY tedious
         work.
       </p>
-      <img src="photo of painted keycaps" />
+      <StyledImg src={painted} />
 
       <h4>Final product</h4>
-      <img src="photo of keyboard" />
+      <StyledImg src={finished} />
       <p>
         With the keycaps complete, I finally had a usable keyboard!! So much
         work went into it, and it is far from perfect, but I learned a lot in

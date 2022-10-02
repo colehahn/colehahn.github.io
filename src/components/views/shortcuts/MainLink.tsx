@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { animated } from "react-spring";
-import useBoop from "../../../hooks/useBoop";
 
 const StyledImg = styled.img`
   height: 2em;
@@ -28,17 +26,21 @@ export const MainLink: React.FC<{
 
     box-shadow: 0px 8px 24px;
     border: 2px solid gray;
-  `;
 
-  const [style, trigger] = useBoop({ scale: 1.05 });
+    &:hover {
+      transform: scale(1.03);
+    }
+    &:active {
+      transfrom: translateY(2px);
+    }
+    transition: all 100ms;
+  `; // TODO: make transitions ssprings
 
   return (
-    <animated.span onMouseEnter={trigger as any} style={style as any}>
-      <MainLinkDiv href={props.url} target="_blank">
-        <label style={{ cursor: "pointer" }}>{props.text}</label>
-        {props.imgSrc && <StyledImg src={props.imgSrc} />}
-      </MainLinkDiv>
-    </animated.span>
+    <MainLinkDiv href={props.url} target="_blank">
+      <label style={{ cursor: "pointer" }}>{props.text}</label>
+      {props.imgSrc && <StyledImg src={props.imgSrc} />}
+    </MainLinkDiv>
   );
 };
 

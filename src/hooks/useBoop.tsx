@@ -8,6 +8,7 @@ function useBoop({
   x = 0,
   y = 0,
   rotation = 0,
+  defaultRotation = 0,
   scale = 1,
   timing = 150,
   springConfig = {
@@ -19,10 +20,10 @@ function useBoop({
   const style = useSpring({
     transform: isBooped
       ? `translate(${x}px, ${y}px)
-         rotate(${rotation}deg)
+         rotate(${rotation + defaultRotation}deg)
          scale(${scale})`
       : `translate(0px, 0px)
-         rotate(0deg)
+         rotate(${defaultRotation}deg)
          scale(1)`,
     config: springConfig,
   });
