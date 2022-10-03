@@ -79,6 +79,14 @@ export const Links: React.FC = () => {
                 </li>
                 <li>
                   <a
+                    href="https://detexify.kirelabs.org/classify.html"
+                    target="_blank"
+                  >
+                    Detexify
+                  </a>
+                </li>
+                <li>
+                  <a
                     href="https://www.gradescope.com/courses/451141"
                     target="_blank"
                   >

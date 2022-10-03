@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import { StyledImg } from "./Projects";
 import acrylic from "../../../assets/images/keyboard/acrylic.jpg";
 import cut_fail from "../../../assets/images/keyboard/cut_fail.jpg";
 import cutting from "../../../assets/images/keyboard/cutting.gif";
@@ -10,16 +10,6 @@ import keycaps from "../../../assets/images/keyboard/keycaps.jpg";
 import painted from "../../../assets/images/keyboard/painted.jpg";
 import solder from "../../../assets/images/keyboard/solder.jpg";
 import finished from "../../../assets/images/keyboard/finished.jpg";
-
-const StyledImg = styled.img`
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-`;
 
 export const Keyboard: React.FC = () => {
   return (

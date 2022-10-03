@@ -1,7 +1,18 @@
 import React from "react";
+import styled from "styled-components";
 import Expander from "../../common/expander/Expander";
 import ExpanderList from "../../common/expander/ExpanderList";
 import Keyboard from "./Keyboard";
+
+export const StyledImg = styled.img`
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+`;
 
 export const Projects: React.FC = () => {
   return (
