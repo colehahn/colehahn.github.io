@@ -11,7 +11,7 @@ export const MobileGame: React.FC = () => {
         <li>subtractive color mixing (steve burns)</li>
         <li>unity</li>
         <li>implementation, challenges</li>
-        <li>gimp</li>
+        <li>gimp :: lisp scripting and my appreciation for james</li>
         <li>publishing, google play vs apple</li>
         <li>current version</li>
         <li>overall learnings and reflection</li>

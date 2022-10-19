@@ -44,8 +44,14 @@ export const Links: React.FC = () => {
         <MainLink
           url="https://play.google.com/console/u/0/developers/8612040722949104962/app-list?pli=1"
           text="Play Console"
-          color="rgba(59, 204, 255, 0.7)"
+          color="rgba(59, 204, 255, 0.5)"
           imgSrc="https://www.gstatic.com/images/branding/product/1x/play_devconsole_32dp.png"
+        />
+        <MainLink
+          url="https://calendar.google.com/calendar/u/0/r"
+          text="Google Calendar"
+          color="rgba(251,188,4,0.7)"
+          imgSrc="https://calendar.google.com/googlecalendar/images/favicons_2020q4/calendar_12.ico"
         />
       </MainLinkContainer>
 
@@ -101,6 +107,14 @@ export const Links: React.FC = () => {
                     Canvas
                   </a>
                 </li>
+                <li>
+                  <a
+                    href="http://noiselab.ucsd.edu/ECE228/Murphy_Machine_Learning.pdf"
+                    target="_blank"
+                  >
+                    Textbook
+                  </a>
+                </li>
               </ul>
               <br /> <hr />
               <h2>ESS 101</h2>
@@ -135,7 +149,10 @@ export const Links: React.FC = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.zybooks.com/" target="_blank">
+                  <a
+                    href="https://learn.zybooks.com/zybook/WASHINGTONCSE474EE474HusseinFall2022"
+                    target="_blank"
+                  >
                     Zybooks
                   </a>
                 </li>
