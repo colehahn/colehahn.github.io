@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Expander from "../../common/expander/Expander";
 import ExpanderList from "../../common/expander/ExpanderList";
 import Keyboard from "./Keyboard";
+import MobileGame from "./MobileGame";
 
 export const StyledImg = styled.img`
   width: 300px;
@@ -22,7 +23,7 @@ export const Projects: React.FC = () => {
       <ExpanderList>
         <Expander
           summary={<h4>Creating a mobile game with Unity</h4>}
-          content={<p>details will be added soon...</p>}
+          content={<MobileGame />}
         />
 
         <Expander

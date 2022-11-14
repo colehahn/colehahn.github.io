@@ -182,6 +182,19 @@ export const Keyboard: React.FC = () => {
         is that I am free to reprogram it, moving around different characters as
         I desire :)
       </p>
+      <h4>QMK and layout</h4>
+      <p>
+        This keyboard came pre-flashed so that it was compatible with VIA, which
+        allows you to easily reprogram different keys through the VIA
+        application. I used this for a year or two, and it was nice because it
+        was super easy to use. However, I eventually decided that it was not
+        enough for me, because I wanted more specific customizations. For this,
+        I needed to use QMK, which would allow me to write code to run on each
+        keypress, and customize functions and my layout. I thought QMK would be
+        difficult to use, but their documentation is really nice and it was easy
+        to get started! My current keymap can be found{" "}
+        <a href="https://github.com/colehahn/colehahn-iris-keymap">here</a>.
+      </p>
     </div>
   );
 };

@@ -127,7 +127,6 @@ export const Links: React.FC = () => {
                     canvas
                   </a>
                 </li>
-                <li>links to specific canvas pages?</li>
               </ul>
               <br /> <hr />
               <h2>CSE 474</h2>
