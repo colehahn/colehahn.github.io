@@ -7,6 +7,8 @@ import About from "./views/about/About";
 import Links from "./views/shortcuts/Links";
 import Error from "./common/Error";
 import Resume from "./views/resume/Resume";
+import Food from "./views/food/Food";
+import Photos from "./views/photos/Photos";
 import Projects from "./views/projects/Projects";
 import { colors } from "../color-theme";
 
@@ -63,6 +65,8 @@ export const Content: React.FC = () => {
             <Route path="/links" element={<Links />} />
             <Route path="/resume" element={<Resume />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/food" element={<Food />} />
+            <Route path="/photos" element={<Photos />} />
             <Route path="/error" element={<Error />} />
             <Route path="*" element={<Navigate to="/error" replace />} />
           </Routes>
