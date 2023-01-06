@@ -30,15 +30,22 @@ export const Food: React.FC = () => {
       <div>
         <Recipe
           name={"Gnocci with pomodoro Sauce"}
+          description="I love making this recipe for my family! If you make the gnocci from scratch, the whole process can take quite some time."
           imgSrc="https://www.foodiecrush.com/wp-content/uploads/2015/08/Gnocchi-With-Pomodoro-Sauce-foodiecrush.com-015.jpg"
           url={"https://www.foodiecrush.com/gnocchi-with-pomodoro-sauce/"}
         />
         <Recipe
           name={"Chickpea shakshuka"}
+          description="When I didn't have other spices, I would use taco seasoning as a substitute, but this always made it so salty!"
           imgSrc="https://minimalistbaker.com/wp-content/uploads/2016/08/AMAZING-Chickpea-SHAKSHUKA-1-Pot-30-minutes-so-much-plantprotein-vegan-glutenfree-plantbased-shakshuka-recipe-easy-healthy.jpg"
           url={"https://minimalistbaker.com/1-pot-chickpea-shakshuka/"}
         />
-        <Recipe name={"Walnut tacos"} imgSrc="" url={""} />
+        <Recipe
+          name={"Walnut tacos"}
+          description="A vegetarian option for tacos!"
+          imgSrc=""
+          url={""}
+        />
       </div>
     </div>
   );

@@ -57,6 +57,115 @@ export const Links: React.FC = () => {
 
       <ExpanderList defaultOpen={0}>
         <Expander
+          summary={<h1>Winter 2023 shortcuts</h1>}
+          content={
+            <div>
+              <h2>CSE 481D: Games Capstone</h2>
+              <ul>
+                <li>
+                  <a
+                    href="https://courses.cs.washington.edu/courses/cse481d/23wi/"
+                    target="_blank"
+                  >
+                    course website
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://edstem.org/us/courses/32314/discussion/"
+                    target="_blank"
+                  >
+                    ed discussion
+                  </a>
+                </li>
+                <li>
+                  <a href="" target="_blank">
+                    Our game's website
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://app.slack.com/client/T04HS7VPXS4/C04HF618W65"
+                    target="_blank"
+                  >
+                    Slack
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://discord.com/channels/@me/1059918018894909460"
+                    target="_blank"
+                  >
+                    Discord group chat
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://canvas.uw.edu/courses/1612159"
+                    target="_blank"
+                  >
+                    Canvas
+                  </a>
+                </li>
+              </ul>
+              <br /> <hr />
+              <h2>CSE 452: Distributed Systems</h2>
+              <ul>
+                <li>
+                  <a
+                    href="https://courses.cs.washington.edu/courses/cse452/23wi/"
+                    target="_blank"
+                  >
+                    course website
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://gitlab.cs.washington.edu/cse452-23wi/dslabs/dslabs-colehahn"
+                    target="_blank"
+                  >
+                    gitlab repo
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://canvas.uw.edu/courses/1631077"
+                    target="_blank"
+                  >
+                    canvas for panopto
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://edstem.org/us/courses/32310/discussion/"
+                    target="_blank"
+                  >
+                    ed board
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.gradescope.com/" target="_blank">
+                    gradescope
+                  </a>
+                </li>
+              </ul>
+              <br /> <hr />
+              <h2>ATM S 111: Global Warming</h2>
+              <ul>
+                <li>
+                  <a
+                    href="https://canvas.uw.edu/courses/1617031"
+                    target="_blank"
+                  >
+                    Canvas
+                  </a>
+                </li>
+              </ul>
+            </div>
+          }
+        />
+
+        <Expander
           summary={<h1>Autumn 2022 shortcuts</h1>}
           content={
             <div>
