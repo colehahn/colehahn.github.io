@@ -79,7 +79,10 @@ export const Links: React.FC = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="" target="_blank">
+                  <a
+                    href="https://doordashacademy-cse481d-wi23.github.io/"
+                    target="_blank"
+                  >
                     Our game's website
                   </a>
                 </li>
