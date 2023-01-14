@@ -147,8 +147,16 @@ export const Links: React.FC = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.gradescope.com/" target="_blank">
+                  <a
+                    href="https://www.gradescope.com/courses/480079"
+                    target="_blank"
+                  >
                     gradescope
+                  </a>
+                </li>
+                <li>
+                  <a href="https://md2pdf.netlify.app/" target="_blank">
+                    MD to PDF
                   </a>
                 </li>
               </ul>
