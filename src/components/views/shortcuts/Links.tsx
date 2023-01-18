@@ -88,6 +88,14 @@ export const Links: React.FC = () => {
                 </li>
                 <li>
                   <a
+                    href="https://trello.com/b/6dExTqhS/doordash-academy"
+                    target="_blank"
+                  >
+                    Trello task board
+                  </a>
+                </li>
+                <li>
+                  <a
                     href="https://app.slack.com/client/T04HS7VPXS4/C04HF618W65"
                     target="_blank"
                   >
