@@ -80,6 +80,12 @@ export const Header: React.FC = () => {
             to="/links"
             label="My Shortcuts"
           />
+        </LinkContainer>
+      </ButtonsOnButton>
+    </HeaderDiv>
+  );
+};
+/*
           <HeaderLink
             currentPage={props.currentPage}
             to="/food"
@@ -90,10 +96,6 @@ export const Header: React.FC = () => {
             to="/photos"
             label="Photos"
           />
-        </LinkContainer>
-      </ButtonsOnButton>
-    </HeaderDiv>
-  );
-};
+          */
 
 export default Header;
