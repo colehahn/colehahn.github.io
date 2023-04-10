@@ -67,11 +67,27 @@ export const Expander: React.FC<{
   const [contentHeight, setContentHeight] = React.useState(-1);
   const [isBoopSpringEnabled, setBoopSpringEnabled] = React.useState(true);
 
+  const onResize = () => {
+    if (reference.current) {
+      const oldheight = reference.current.style.getPropertyValue("height");
+      reference.current.style.setProperty("height", "auto");
+      setContentHeight(reference.current.offsetHeight);
+      reference.current.style.setProperty("height", oldheight);
+    }
+  };
+
   React.useEffect(() => {
+    // on mount
     if (reference.current) {
       setContentHeight(reference.current.offsetHeight);
     }
     setOpen(props.open || false);
+    window.addEventListener("resize", onResize);
+
+    // on unmount
+    return () => {
+      window.removeEventListener("resize", onResize);
+    };
   }, []);
 
   React.useEffect(() => {
