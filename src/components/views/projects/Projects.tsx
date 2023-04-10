@@ -4,6 +4,8 @@ import Expander from "../../common/expander/Expander";
 import ExpanderList from "../../common/expander/ExpanderList";
 import Keyboard from "./Keyboard";
 import MobileGame from "./MobileGame";
+import AlarmShortcut from "./AlarmShortcut";
+import Budgeter from "./Budgeter";
 
 export const StyledImg = styled.img`
   width: 300px;
@@ -21,6 +23,13 @@ export const Projects: React.FC = () => {
       <h3>Here are some of my projects:</h3>
 
       <ExpanderList>
+        {/*<Expander summary={<h4>python budgeter</h4>} content={<Budgeter />} />*/}
+
+        <Expander
+          summary={<h4>Alarm shortcut on iOS</h4>}
+          content={<AlarmShortcut />}
+        />
+
         <Expander
           summary={<h4>Creating a mobile game with Unity</h4>}
           content={<MobileGame />}
