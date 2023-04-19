@@ -1,8 +1,8 @@
 import React from "react";
-const photo_loveland = require("../../../assets/images/IMG_7107.JPG");
-const photo_hawaii = require("../../../assets/images/IMG_8370.JPG");
-const milky_way1 = require("../../../assets/images/IMG_5159 better.JPG");
-const milky_way2 = require("../../../assets/images/IMG_8322.JPG");
+const photo_loveland = "/assets/images/IMG_7107.JPG";
+const photo_hawaii = "/assets/images/IMG_8370.JPG";
+const milky_way1 = "/assets/images/IMG_5159 better.JPG";
+const milky_way2 = "/assets/images/IMG_8322.JPG";
 import styled from "styled-components";
 
 const ImgStyled = styled.img`

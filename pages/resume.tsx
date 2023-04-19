@@ -13,8 +13,6 @@ const ResumeViewer = styled.iframe`
 `;
 
 export const Resume: React.FC = () => {
-  let reader = new FileReader();
-
   return (
     <ResumeDiv>
       <p>Here is a recent version of my resume:</p>

@@ -1,15 +1,15 @@
 import React from "react";
-import { StyledImg } from "./Projects";
-import acrylic from "../../../assets/images/keyboard/acrylic.jpg";
-import cut_fail from "../../../assets/images/keyboard/cut_fail.jpg";
-import cutting from "../../../assets/images/keyboard/cutting.gif";
-import cutout from "../../../assets/images/keyboard/cutout.jpg";
-import print_fail from "../../../assets/images/keyboard/print_fail.jpg";
-import print from "../../../assets/images/keyboard/3d_print.jpg";
-import keycaps from "../../../assets/images/keyboard/keycaps.jpg";
-import painted from "../../../assets/images/keyboard/painted.jpg";
-import solder from "../../../assets/images/keyboard/solder.jpg";
-import finished from "../../../assets/images/keyboard/finished.jpg";
+import { StyledImg } from "../../../../pages/projects";
+const acrylic = "/assets/images/keyboard/acrylic.jpg";
+const cut_fail = "/assets/images/keyboard/cut_fail.jpg";
+const cutting = "/assets/images/keyboard/cutting.gif";
+const cutout = "/assets/images/keyboard/cutout.jpg";
+const print_fail = "/assets/images/keyboard/print_fail.jpg";
+const print = "/assets/images/keyboard/3d_print.jpg";
+const keycaps = "/assets/images/keyboard/keycaps.jpg";
+const painted = "/assets/images/keyboard/painted.jpg";
+const solder = "/assets/images/keyboard/solder.jpg";
+const finished = "/assets/images/keyboard/finished.jpg";
 
 export const Keyboard: React.FC = () => {
   return (

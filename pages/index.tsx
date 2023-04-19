@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { useNavigate } from "react-router-dom";
 import { useTransition, animated } from "react-spring";
 import { FaGithub, FaLinkedin, FaFileAlt } from "react-icons/fa";
-import Tile from "./Tile";
+import Tile from "../src/components/views/home/Tile";
+import { useRouter } from "next/router";
 
 const TileGrid = styled.div`
   display: flex;
@@ -19,7 +19,7 @@ const openInNewTab = (url: string) => {
 };
 
 export const Home: React.FC = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const tiles = [
     <Tile
@@ -40,7 +40,7 @@ export const Home: React.FC = () => {
       key="resume"
       text="View my resume"
       icon={<FaFileAlt size="100" />}
-      onClick={(e) => navigate("/resume")}
+      onClick={(e) => router.push("/resume")}
     />,
   ];
 

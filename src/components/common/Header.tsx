@@ -1,15 +1,13 @@
 import React from "react";
 import HeaderLink from "./HeaderLink";
 import styled from "styled-components";
-import logo from "../../assets/images/my face.png";
+const logo = "/assets/images/my face.png";
 import { colors } from "../../color-theme";
-import { useLocation } from "react-router-dom";
-
-const HEADER_HEIGHT_PX = screen.height / 12;
+import { useRouter } from "next/router";
 
 const HeaderDiv = styled.div`
   background: linear-gradient(${colors.primary} 95%, lightgray 100%);
-  min-height: ${HEADER_HEIGHT_PX}px;
+  min-height: 12vh;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -27,7 +25,7 @@ const ImgAndTitle = styled.div`
 
 const HeaderImg = styled.img`
   display: inline-block;
-  height: ${HEADER_HEIGHT_PX}px !important;
+  height: 12vh !important;
 `;
 
 const ButtonsOnButton = styled.div`
@@ -40,8 +38,8 @@ const LinkContainer = styled.div`
 `;
 
 export const Header: React.FC = () => {
-  const location = useLocation();
-  const props = { currentPage: location.pathname };
+  const router = useRouter();
+  const props = { currentPage: router.pathname };
   return (
     <HeaderDiv>
       <HeaderLink

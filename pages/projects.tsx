@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import Expander from "../../common/expander/Expander";
-import ExpanderList from "../../common/expander/ExpanderList";
-import Keyboard from "./Keyboard";
-import MobileGame from "./MobileGame";
-import AlarmShortcut from "./AlarmShortcut";
-import Budgeter from "./Budgeter";
+import Expander from "../src/components/common/expander/Expander";
+import ExpanderList from "../src/components/common/expander/ExpanderList";
+import Keyboard from "../src/components/views/projects/Keyboard";
+import MobileGame from "../src/components/views/projects/MobileGame";
+import AlarmShortcut from "../src/components/views/projects/AlarmShortcut";
+import Budgeter from "../src/components/views/projects/Budgeter";
 
 export const StyledImg = styled.img`
   width: 300px;

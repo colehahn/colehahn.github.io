@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import icon from "../../../assets/images/alarms_shortcut/shortcuts_icon.png";
-import dragndrop from "../../../assets/images/alarms_shortcut/drag_and_drop.png";
-import demo from "../../../assets/images/alarms_shortcut/demo.gif";
+const icon = "/assets/images/alarms_shortcut/shortcuts_icon.png";
+const dragndrop = "/assets/images/alarms_shortcut/drag_and_drop.png";
+const demo = "/assets/images/alarms_shortcut/demo.gif";
 import FixedSizeImg from "../../common/FixedSizeImg";
 
 export const ShortParagraphByFloatingImg = styled.div`
@@ -47,28 +47,29 @@ export const AlarmShortcut: React.FC = () => {
         phone is strictly worse than my old one". This wasn't true though, and I
         realized that there were just a few small things that I wished my new
         phone could do. My biggest complaints were as follows:
-        <ul>
-          <li>
-            I want the home screen to open immediately after using facial
-            recognition, without needing to swipe up.
-          </li>
-          <li>
-            I want to be able to change the volume of my alarm (maybe this is
-            possible, I just don't know how because there seems to be only one
-            volume option, unlike on my old phone where I could set volumes for
-            ringtone, notifications, media, and alarms all separately)
-          </li>
-          <li>
-            When setting an alarm, I want my phone to tell me how long until it
-            goes off. This was the default on my old phone, and it's nice so
-            that I know right away how much sleep I will be able to get
-          </li>
-          <li>
-            No headphone jack, and Apple doesn't send the phone with a USB
-            converter
-          </li>
-        </ul>
       </p>
+      <ul>
+        <li>
+          I want the home screen to open immediately after using facial
+          recognition, without needing to swipe up.
+        </li>
+        <li>
+          I want to be able to change the volume of my alarm (maybe this is
+          possible, I just don't know how because there seems to be only one
+          volume option, unlike on my old phone where I could set volumes for
+          ringtone, notifications, media, and alarms all separately)
+        </li>
+        <li>
+          When setting an alarm, I want my phone to tell me how long until it
+          goes off. This was the default on my old phone, and it's nice so that
+          I know right away how much sleep I will be able to get
+        </li>
+        <li>
+          No headphone jack, and Apple doesn't send the phone with a USB
+          converter
+        </li>
+      </ul>
+
       <h4>The solution</h4>
       <FixedSizeImg
         width={100}
@@ -131,7 +132,7 @@ export const AlarmShortcut: React.FC = () => {
           >
             here
           </a>
-          ! (link for iPhone/iPad/MacOS? only, sorr non-Apple people)
+          ! (link for iPhone/iPad/MacOS? only, sorry non-Apple people)
         </p>
       </ShortParagraphByFloatingImg>
       <h4 style={{ clear: "both" }}>Limitations:</h4>

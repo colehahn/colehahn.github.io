@@ -1,6 +1,6 @@
 This project was created with create-react-app
 
-To develop locally, use `npm start`
+To develop locally, use `npm run dev`
 
 To update your github pages website, use `npm run deploy`
 
