@@ -11,7 +11,6 @@ const StyledLink = styled.a`
   line-height: 40px; // vertically align text
   text-align: center;
   text-decoration: none;
-  color: black;
   border-radius: 50px;
   background-color: ${(props: any) =>
     (props as any)[`data-currentpage`] === props.to

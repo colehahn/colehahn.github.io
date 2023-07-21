@@ -6,7 +6,16 @@ import { colors } from "../../color-theme";
 import { useRouter } from "next/router";
 
 const HeaderDiv = styled.div`
-  background: linear-gradient(${colors.primary} 95%, lightgray 100%);
+  background: linear-gradient(
+    ${colors.primary} 95%,
+    ${colors.background2} 100%
+  );
+  @media (prefers-color-scheme: dark) {
+    background: linear-gradient(
+      ${colors.primary} 95%,
+      ${colors["background2-dark"]} 100%
+    );
+  }
   min-height: 12vh;
   position: relative;
   display: flex;

@@ -9,16 +9,27 @@ const AppDiv = styled.div`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  @media (prefers-color-scheme: dark) {
+    color: ${colors["text-dark"]};
+  }
 `;
 
 const ComponentDiv = styled.div`
   flex-grow: 1;
   background: linear-gradient(
-    lightgray 0%,
+    ${colors.background2} 0%,
     ${colors.background} 20%,
     ${colors.background} 80%,
-    lightgray 100%
+    ${colors.background2} 100%
   );
+  @media (prefers-color-scheme: dark) {
+    background: linear-gradient(
+      ${colors["background2-dark"]} 0%,
+      ${colors["background-dark"]} 20%,
+      ${colors["background-dark"]} 80%,
+      ${colors["background2-dark"]} 100%
+    );
+  }
   padding-left: 5vw;
   padding-right: 5vw;
   overflow: hidden;

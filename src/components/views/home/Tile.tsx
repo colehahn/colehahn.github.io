@@ -3,7 +3,10 @@ import styled from "styled-components";
 import { colors } from "../../../color-theme";
 
 const TileDiv = styled.a`
-  background-color: lightgray;
+  background-color: ${colors.background2};
+  @media (prefers-color-scheme: dark) {
+    background-color: ${colors["background2-dark"]};
+  }
   min-width: 15vw;
   padding: 10px;
   margin: 10px;

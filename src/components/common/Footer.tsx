@@ -3,14 +3,19 @@ import styled from "styled-components";
 import { colors } from "../../color-theme";
 
 const FooterDiv = styled.div`
-  background: linear-gradient(lightgray 0%, ${colors.primary} 10%);
+  background: linear-gradient(${colors.background2} 0%, ${colors.primary} 10%);
+  @media (prefers-color-scheme: dark) {
+    background: linear-gradient(
+      ${colors["background2-dark"]} 0%,
+      ${colors.primary} 10%
+    );
+  }
   text-align: center;
 `;
 
 const StyledARight = styled.a`
   position: absolute;
   right: 2%;
-  color: inherit;
 `;
 
 export const Footer: React.FC = () => {
