@@ -24,11 +24,12 @@ export const Projects: React.FC = () => {
       <h3>Here are some of my projects:</h3>
 
       <ExpanderList>
+        <Expander summary={<h4>Python budgeter</h4>} content={<Budgeter />} />
+
         <Expander
           summary={<h4>SQL Gmail Explorer</h4>}
           content={<GmailSQL />}
         />
-        {/*<Expander summary={<h4>python budgeter</h4>} content={<Budgeter />} />*/}
 
         <Expander
           summary={<h4>Alarm shortcut on iOS</h4>}
