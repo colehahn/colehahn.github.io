@@ -5,8 +5,6 @@ import Footer from "../src/components/common/Footer";
 import { colors } from "../src/color-theme";
 import { device } from "../src/utils/device";
 
-export const padding = typeof screen !== "undefined" ? screen.width / 20 : 50;
-
 const AppDiv = styled.div`
   min-height: 100vh;
   display: flex;
@@ -21,8 +19,8 @@ const ComponentDiv = styled.div`
     ${colors.background} 80%,
     lightgray 100%
   );
-  padding-left: ${padding}px;
-  padding-right: ${padding}px;
+  padding-left: 5vw;
+  padding-right: 5vw;
   overflow: hidden;
 
   display: grid;
@@ -36,9 +34,9 @@ const ComponentDiv = styled.div`
     width: 100%;
     margin-bottom: 3em;
     // helps with mobile
-    max-width: 70%;
+    max-width: 90vw;
     @media ${device.laptop} {
-      max-width: 90%;
+      max-width: 70vw;
     }
     display: block;
     margin-left: auto;

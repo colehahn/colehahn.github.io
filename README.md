@@ -8,5 +8,4 @@ To update your github pages website, use `npm run deploy`
 
 - add dark mode support
 - add color for safari border like on other website
-- fix bug with side margins on mobile
 - it would be cool to have my resume automatically export as pdf and commit to here

@@ -14,11 +14,18 @@ export const FixedSizeImg: React.FC<{
         ...props.positionStyle,
         width: props.width,
         height: props.height,
+        maxWidth: "100%",
+        overflowX: "scroll",
+        overflowY: "hidden",
       }}
     >
       <img
         src={props.src}
-        style={{ ...props.imgStyle, width: props.width, height: props.height }}
+        style={{
+          ...props.imgStyle,
+          width: props.width,
+          height: props.height,
+        }}
       />
     </div>
   );
