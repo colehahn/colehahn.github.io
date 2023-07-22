@@ -12,18 +12,30 @@ const StyledLink = styled.a`
   text-align: center;
   text-decoration: none;
   border-radius: 50px;
-  background-color: ${(props: any) =>
-    (props as any)[`data-currentpage`] === props.to
+  background-color: ${(propss: any) =>
+    propss[`data-currentpage`] === propss[`data-to`]
       ? `${colors.accent}`
       : `rgba(255, 255, 255, 0.2)`};
+  @media (prefers-color-scheme: dark) {
+    background-color: ${(propss: any) =>
+      propss[`data-currentpage`] === propss[`data-to`]
+        ? `${colors.accent}`
+        : `rgba(0, 0, 0, 0.2)`};
+  }
   height: max-content;
 
   transition: background-color 300ms;
   &:hover {
-    background-color: ${(props: any) =>
-      (props as any)[`data-currentpage`] === props.to
+    background-color: ${(propss: any) =>
+      propss[`data-currentpage`] === propss[`data-to`]
         ? `${colors.accent}`
         : `rgba(255, 255, 255, 0.1)`};
+    @media (prefers-color-scheme: dark) {
+      background-color: ${(propss: any) =>
+        propss[`data-currentpage`] === propss[`data-to`]
+          ? `${colors.accent}`
+          : `rgba(0, 0, 0, 0.1)`};
+    }
   }
 `;
 
@@ -34,7 +46,11 @@ export const HeaderLink: React.FC<{
 }> = (props) => {
   const router = useRouter();
   return (
-    <StyledLink data-currentpage={props.currentPage} href={props.to}>
+    <StyledLink
+      data-currentpage={props.currentPage}
+      data-to={props.to}
+      href={props.to}
+    >
       {props.label}
     </StyledLink>
   );
