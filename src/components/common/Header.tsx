@@ -6,6 +6,7 @@ import { colors } from "../../color-theme";
 import { useRouter } from "next/router";
 
 const HeaderDiv = styled.div`
+  padding-bottom: calc(12vh * 0.05);
   background: linear-gradient(
     ${colors.primary} 95%,
     ${colors.background2} 100%
