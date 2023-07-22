@@ -1,3 +1,4 @@
+import Head from "next/head";
 import styled from "styled-components";
 import "../src/index.css";
 import Header from "../src/components/common/Header";
@@ -58,6 +59,13 @@ const ComponentDiv = styled.div`
 export default function MyApp({ Component, pageProps }) {
   return (
     <AppDiv>
+      <Head>
+        <title>Cole Hahn's Website</title>
+        <meta name="description" content="Cole Hahn's personal website" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#357c7f" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Header />
       <ComponentDiv>
         <Component {...pageProps} />
