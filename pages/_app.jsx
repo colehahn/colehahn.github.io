@@ -38,6 +38,8 @@ const ComponentDiv = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
+  position: relative;
+  z-index: 0;
 
   & > * {
     grid-column-start: 1;
