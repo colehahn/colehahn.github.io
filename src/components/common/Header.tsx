@@ -83,11 +83,6 @@ export const Header: React.FC = () => {
             to="/about"
             label="About Me"
           />
-          <HeaderLink
-            currentPage={props.currentPage}
-            to="/links"
-            label="My Shortcuts"
-          />
         </LinkContainer>
       </ButtonsOnButton>
     </HeaderDiv>

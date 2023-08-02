@@ -25,17 +25,18 @@ export const About: React.FC = () => {
     <div>
       <h3>About</h3>
       <p>
-        I was born and raised in Washington state, and currently go to school at
-        the University of Washington, where I am studying computer engineering.
-        I like working on coding projects--including this website!
+        I was born and raised in Washington state, and I graduated from the
+        University of Washington in 2023, with a B.S. in Computer Engineering.
+        Since then, I've been living it up on the East Coast for the summer,
+        until October when I will return to Washington for work.
       </p>
       <p>
-        In my free time, I like to go hiking/camping, sailing, or just spend
-        time outside (when the weather is nice of course). I think the world
-        would be a much better place if everybody had a deeper respect for
-        nature. I enjoy taking pictures, especially of the night sky. I am
-        happily engaged to an amazing woman, who, unfortunately, lives across
-        the country from me currently.
+        I like working on coding projects--including this website! In my free
+        time though, I like to go hiking/camping, sailing, or just spend time
+        outside (when the weather is nice of course). I think the world would be
+        a much better place if everybody had a deeper respect for nature. I
+        enjoy taking pictures, especially of the night sky. I am happily engaged
+        to an amazing woman, and we will be getting married next summer!
       </p>
       <p>Here are some photos:</p>
       <ImgStyled alt="photo of me in Colorado" src={String(photo_loveland)} />
