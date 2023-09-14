@@ -7,6 +7,7 @@ import MobileGame from "../src/components/views/projects/MobileGame";
 import AlarmShortcut from "../src/components/views/projects/AlarmShortcut";
 import Budgeter from "../src/components/views/projects/Budgeter";
 import GmailSQL from "../src/components/views/projects/GmailSQL";
+import TileMapSerializer from "../src/components/views/projects/TileMapSerializer";
 
 export const StyledImg = styled.img`
   width: 300px;
@@ -24,6 +25,11 @@ export const Projects: React.FC = () => {
       <h3>Here are some of my projects:</h3>
 
       <ExpanderList>
+        <Expander
+          summary={<h4>Unity Tilemap Serializer</h4>}
+          content={<TileMapSerializer />}
+        />
+
         <Expander summary={<h4>Python budgeter</h4>} content={<Budgeter />} />
 
         <Expander
