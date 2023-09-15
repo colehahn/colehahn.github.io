@@ -6,7 +6,7 @@ import OnEditorSave from "../../../formattedCode/TilemapSerializer/OnEditorSave"
 import CustomBuildProcessor from "../../../formattedCode/TilemapSerializer/CustomBuildProcessor";
 import RemoveUnusedTiles from "../../../formattedCode/TilemapSerializer/removeUnusedTiles";
 import styled from "styled-components";
-import { colors } from "../../../color-theme";
+import { colors } from "../../../styles/color-theme";
 
 const StyledTable = styled.table`
   margin: 1em 0;

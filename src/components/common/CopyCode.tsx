@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { BiCopy } from "react-icons/bi";
-import { colors } from "../../color-theme";
+import { colors } from "../../styles/color-theme";
 
 const borderRadius = "1em";
 

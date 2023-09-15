@@ -2,7 +2,7 @@ import React from "react";
 import HeaderLink from "./HeaderLink";
 import styled from "styled-components";
 const logo = "/assets/images/my face.png";
-import { colors } from "../../color-theme";
+import { colors } from "../../styles/color-theme";
 import { useRouter } from "next/router";
 
 const HeaderDiv = styled.div`

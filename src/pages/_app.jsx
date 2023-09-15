@@ -1,9 +1,9 @@
 import Head from "next/head";
 import styled from "styled-components";
-import "../index.css";
+import "../styles/index.css";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
-import { colors } from "../color-theme";
+import { colors } from "../styles/color-theme";
 import { device } from "../utils/device";
 import "../styles/gradient-border.css";
 

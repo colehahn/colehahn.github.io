@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { colors } from "../../color-theme";
+import { colors } from "../../styles/color-theme";
 
 const FooterDiv = styled.div`
   background: linear-gradient(${colors.background2} 0%, ${colors.primary} 10%);

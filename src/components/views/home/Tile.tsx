@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { colors } from "../../../color-theme";
+import { colors } from "../../../styles/color-theme";
 
 const TileDiv = styled.a`
   background-color: ${colors.background2};
