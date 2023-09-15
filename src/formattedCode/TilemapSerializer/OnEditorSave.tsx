@@ -2,43 +2,39 @@ export const OnEditorSave = (
   <div>
     #if&nbsp;UNITY_EDITOR
     <br />
+    using&nbsp;System.Collections;
+    <br />
+    using&nbsp;System.Collections.Generic;
+    <br />
     using&nbsp;UnityEngine;
     <br />
     using&nbsp;UnityEditor;
     <br />
     <br />
-    [CustomEditor(typeof(TilemapSerializer))]
-    <br />
-    public&nbsp;class&nbsp;TilemapSerializerInspector&nbsp;:&nbsp;Editor
+    public&nbsp;class&nbsp;OnEditorSave&nbsp;:&nbsp;AssetModificationProcessor
     <br />
     {"{"}
     <br />
-    &nbsp;&nbsp;public&nbsp;override&nbsp;void&nbsp;OnInspectorGUI()
     <br />
-    &nbsp;&nbsp;{"{"}
+    &nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;static&nbsp;string[]&nbsp;OnWillSaveAssets(string[]&nbsp;paths)
     <br />
-    &nbsp;&nbsp;&nbsp;&nbsp;DrawDefaultInspector();
+    &nbsp;&nbsp;&nbsp;&nbsp;{"{"}
     <br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TilemapSerializer&nbsp;serializer&nbsp;=&nbsp;GameObject.FindObjectOfType
+    {"<"}TilemapSerializer{">"}();
     <br />
-    &nbsp;&nbsp;&nbsp;&nbsp;TilemapSerializer&nbsp;grid&nbsp;=&nbsp;(TilemapSerializer)target;
-    <br />
-    &nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(GUILayout.Button("Load&nbsp;Tilemap&nbsp;(might&nbsp;take&nbsp;a&nbsp;minute)"))&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(serializer&nbsp;!=&nbsp;null)&nbsp;
     {"{"}
     <br />
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grid.LoadTilemap();
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;serializer.SaveChanges();
+    <br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"}"}
+    <br />
+    <br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;paths;
     <br />
     &nbsp;&nbsp;&nbsp;&nbsp;{"}"}
     <br />
-    &nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(GUILayout.Button("Clear&nbsp;Scene&nbsp;for&nbsp;commiting&nbsp;to&nbsp;GitHub"))&nbsp;
-    {"{"}
-    <br />
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grid.SaveChanges();
-    <br />
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grid.ClearTileMaps();
-    <br />
-    &nbsp;&nbsp;&nbsp;&nbsp;{"}"}
-    <br />
-    &nbsp;&nbsp;{"}"}
     <br />
     {"}"}
     <br />
