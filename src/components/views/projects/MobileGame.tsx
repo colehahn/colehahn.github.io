@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledImg } from "../../../../pages/projects";
+import { StyledImg } from "../../../pages/projects";
 
 export const MobileGame: React.FC = () => {
   return (

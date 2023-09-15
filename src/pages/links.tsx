@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import MainLink from "../src/components/views/shortcuts/MainLink";
-import Expander from "../src/components/common/expander/Expander";
-import ExpanderList from "../src/components/common/expander/ExpanderList";
+import MainLink from "../components/views/shortcuts/MainLink";
+import Expander from "../components/common/expander/Expander";
+import ExpanderList from "../components/common/expander/ExpanderList";
 
 const MainLinkContainer = styled.div`
   display: flex;

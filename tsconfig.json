@@ -18,10 +18,10 @@
   },
   "include": [
     "src",
-    "pages/resume.tsx",
-    "pages/about.tsx",
-    "pages/projects.tsx",
-    "pages/links.tsx"
+    "src/pages/resume.tsx",
+    "src/pages/about.tsx",
+    "src/pages/projects.tsx",
+    "src/pages/links.tsx"
   ],
   "exclude": ["node_modules"]
 }

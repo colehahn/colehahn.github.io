@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useTransition, animated } from "react-spring";
 import { FaGithub, FaLinkedin, FaFileAlt } from "react-icons/fa";
-import Tile from "../src/components/views/home/Tile";
+import Tile from "../components/views/home/Tile";
 import { useRouter } from "next/router";
 
 const TileGrid = styled.div`

@@ -1,11 +1,11 @@
 import Head from "next/head";
 import styled from "styled-components";
-import "../src/index.css";
-import Header from "../src/components/common/Header";
-import Footer from "../src/components/common/Footer";
-import { colors } from "../src/color-theme";
-import { device } from "../src/utils/device";
-import "../src/styles/gradient-border.css";
+import "../index.css";
+import Header from "../components/common/Header";
+import Footer from "../components/common/Footer";
+import { colors } from "../color-theme";
+import { device } from "../utils/device";
+import "../styles/gradient-border.css";
 
 const AppDiv = styled.div`
   min-height: 100vh;

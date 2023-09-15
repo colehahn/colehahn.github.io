@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledImg } from "../../../../pages/projects";
+import { StyledImg } from "../../../pages/projects";
 const acrylic = "/assets/images/keyboard/acrylic.jpg";
 const cut_fail = "/assets/images/keyboard/cut_fail.jpg";
 const cutting = "/assets/images/keyboard/cutting.gif";

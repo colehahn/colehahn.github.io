@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { StyledImg } from "../../../../pages/projects";
+import { StyledImg } from "../../../pages/projects";
 
 const RecipeDiv = styled.div`
   display: grid;

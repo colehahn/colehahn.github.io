@@ -13,4 +13,4 @@ To update your github pages website, use `npm run deploy`
 - it would be cool to have my resume automatically export as pdf and commit to here
 - pages I could add: photo gallery, recipie book, sailing log, blog
 - utterences.es for comments on select pages?
-- restructure files. move pages into src. probably want to make each project its own page... not sure yet though
+- probably want to make each project its own page... not sure yet though. probably once i have enough projects it will be too much to load on one page

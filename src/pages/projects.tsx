@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import Expander from "../src/components/common/expander/Expander";
-import ExpanderList from "../src/components/common/expander/ExpanderList";
-import Keyboard from "../src/components/views/projects/Keyboard";
-import MobileGame from "../src/components/views/projects/MobileGame";
-import AlarmShortcut from "../src/components/views/projects/AlarmShortcut";
-import Budgeter from "../src/components/views/projects/Budgeter";
-import GmailSQL from "../src/components/views/projects/GmailSQL";
-import TileMapSerializer from "../src/components/views/projects/TileMapSerializer";
+import Expander from "../components/common/expander/Expander";
+import ExpanderList from "../components/common/expander/ExpanderList";
+import Keyboard from "../components/views/projects/Keyboard";
+import MobileGame from "../components/views/projects/MobileGame";
+import AlarmShortcut from "../components/views/projects/AlarmShortcut";
+import Budgeter from "../components/views/projects/Budgeter";
+import GmailSQL from "../components/views/projects/GmailSQL";
+import TileMapSerializer from "../components/views/projects/TileMapSerializer";
 
 export const StyledImg = styled.img`
   width: 300px;
