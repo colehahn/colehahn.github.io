@@ -6,14 +6,13 @@ import OnEditorSave from "../../../formattedCode/TilemapSerializer/OnEditorSave"
 import CustomBuildProcessor from "../../../formattedCode/TilemapSerializer/CustomBuildProcessor";
 import RemoveUnusedTiles from "../../../formattedCode/TilemapSerializer/removeUnusedTiles";
 import styled from "styled-components";
-import { colors } from "../../../styles/color-theme";
 
 const StyledTable = styled.table`
   margin: 1em 0;
   border: 1px solid;
-  background-color: ${colors["background"]};
+  background-color: var(--background);
   @media (prefers-color-scheme: dark) {
-    background-color: ${colors["background-dark"]};
+    background-color: var(background-dark);
   }
   text-align: center;
   & thead tr th {

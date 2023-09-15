@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { colors } from "../../../styles/color-theme";
 
 const StyledImg = styled.img`
   height: 2em;
@@ -25,9 +24,9 @@ export const MainLink: React.FC<{
     justify-content: center;
     align-items: center;
 
-    box-shadow: 0px 8px 24px ${colors.background2};
+    box-shadow: 0px 8px 24px var(--background2);
     @media (prefers-color-scheme: dark) {
-      box-shadow: 0px 8px 24px ${colors["background2-dark"]};
+      box-shadow: 0px 8px 24px var(--background2-dark);
     }
     border: 2px solid gray;
 

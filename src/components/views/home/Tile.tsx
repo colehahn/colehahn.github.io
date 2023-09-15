@@ -1,11 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { colors } from "../../../styles/color-theme";
 
 const TileDiv = styled.a`
-  background-color: ${colors.background2};
+  background-color: var(--background2);
   @media (prefers-color-scheme: dark) {
-    background-color: ${colors["background2-dark"]};
+    background-color: var(--background2-dark);
   }
   min-width: 15vw;
   padding: 10px 20px;
@@ -24,7 +23,7 @@ const TileDiv = styled.a`
 
   transition: background-color 400ms;
   &:hover {
-    background-color: ${colors.accent};
+    background-color: var(--accent);
     cursor: pointer;
   }
 

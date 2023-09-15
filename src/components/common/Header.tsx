@@ -2,19 +2,15 @@ import React from "react";
 import HeaderLink from "./HeaderLink";
 import styled from "styled-components";
 const logo = "/assets/images/my face.png";
-import { colors } from "../../styles/color-theme";
 import { useRouter } from "next/router";
 
 const HeaderDiv = styled.div`
   padding-bottom: calc(12vh * 0.05);
-  background: linear-gradient(
-    ${colors.primary} 95%,
-    ${colors.background2} 100%
-  );
+  background: linear-gradient(var(--primary) 95%, var(background2) 100%);
   @media (prefers-color-scheme: dark) {
     background: linear-gradient(
-      ${colors.primary} 95%,
-      ${colors["background2-dark"]} 100%
+      var(--primary) 95%,
+      var(--background2-dark) 100%
     );
   }
   min-height: 12vh;

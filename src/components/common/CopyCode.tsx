@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { BiCopy } from "react-icons/bi";
-import { colors } from "../../styles/color-theme";
 
 const borderRadius = "1em";
 
@@ -82,9 +81,9 @@ const StyledIcon = styled(BiCopy)`
 
 const CopiedLabel = styled.label`
   border: 1px solid;
-  background-color: ${colors["background"]};
+  background-color: var(--background);
   @media (prefers-color-scheme: dark) {
-    background-color: ${colors["background-dark"]};
+    background-color: var(--background-dark);
   }
   position: relative;
   top: 1em;

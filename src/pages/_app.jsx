@@ -3,7 +3,6 @@ import styled from "styled-components";
 import "../styles/index.css";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
-import { colors } from "../styles/color-theme";
 import { device } from "../utils/device";
 import "../styles/gradient-border.css";
 
@@ -12,24 +11,24 @@ const AppDiv = styled.div`
   display: flex;
   flex-direction: column;
   @media (prefers-color-scheme: dark) {
-    color: ${colors["text-dark"]};
+    color: var(--text-dark);
   }
 `;
 
 const ComponentDiv = styled.div`
   flex-grow: 1;
   background: linear-gradient(
-    ${colors.background2} 0%,
-    ${colors.background} 20%,
-    ${colors.background} 80%,
-    ${colors.background2} 100%
+    var(--background2) 0%,
+    var(--background) 20%,
+    var(--background) 80%,
+    var(--background2) 100%
   );
   @media (prefers-color-scheme: dark) {
     background: linear-gradient(
-      ${colors["background2-dark"]} 0%,
-      ${colors["background-dark"]} 20%,
-      ${colors["background-dark"]} 80%,
-      ${colors["background2-dark"]} 100%
+      var(--background2-dark) 0%,
+      var(--background-dark) 20%,
+      var(--background-dark) 80%,
+      var(--background2-dark) 100%
     );
   }
   padding-left: 5vw;
