@@ -19,6 +19,7 @@ export const ExpanderList: React.FC<{
           onClick={() => {
             i === openExpanderIndex ? setOpenExpander(-1) : setOpenExpander(i);
           }}
+          key={i}
         />
       ))}
     </div>

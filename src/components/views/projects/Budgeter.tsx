@@ -27,8 +27,8 @@ export const Budgeter: React.FC = () => {
       <FixedSizeImg
         positionStyle={{
           display: "block",
-          "margin-left": "auto",
-          "margin-right": "auto",
+          marginLeft: "auto",
+          marginRight: "auto",
         }}
         width={500}
         height={375}

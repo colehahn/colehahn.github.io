@@ -104,7 +104,7 @@ export const Expander: React.FC<{
   });
 
   const summaryStyle = useSpring({
-    "background-color": isOpen ? "rgba(0,0,0,0.1)" : "rgba(0,0,0,0.2)",
+    backgroundColor: isOpen ? "rgba(0,0,0,0.1)" : "rgba(0,0,0,0.2)",
   });
 
   const [style, trigger] = useBoop({
