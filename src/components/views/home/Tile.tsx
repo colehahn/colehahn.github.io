@@ -1,7 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-const TileDiv = styled.a`
+const TileDiv = styled.button`
+  border: none;
+  font-size: inherit;
+  font-family: inherit;
+
   background-color: var(--background2);
   @media (prefers-color-scheme: dark) {
     background-color: var(--background2-dark);
@@ -39,11 +43,18 @@ export const Tile: React.FC<{
   onClick: (e: any) => void;
 }> = (props) => {
   return (
-    <TileDiv className="gradient-border" onClick={(e) => props.onClick(e)}>
-      <label>{props.text}</label>
-      <br />
-      {props.icon}
-    </TileDiv>
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        props.onClick(e);
+      }}
+    >
+      <TileDiv type="submit" className="gradient-border">
+        <label>{props.text}</label>
+        <br />
+        {props.icon}
+      </TileDiv>
+    </form>
   );
 };
 
