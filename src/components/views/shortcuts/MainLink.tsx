@@ -4,6 +4,34 @@ import styled from "styled-components";
 const StyledImg = styled.img`
   height: 2em;
   margin-left: 1em;
+  pointer-events: none;
+`;
+
+const MainLinkDiv = styled.a`
+  padding: 0.5em;
+  background-color: rgba(255, 255, 255, 0.2);
+  background-color: ${(propss: any) => propss["data-color"]};
+  border-radius: 1em;
+  margin: 1em;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0px 8px 24px var(--background2);
+  @media (prefers-color-scheme: dark) {
+    box-shadow: 0px 8px 24px var(--background2-dark);
+  }
+  border: 2px solid gray;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+  &:active {
+    transform: translateY(2px);
+  }
+  transition: all 100ms;
 `;
 
 export const MainLink: React.FC<{
@@ -13,34 +41,8 @@ export const MainLink: React.FC<{
   // could also allow to change text color so that we can have darker backgrounds
   url: string;
 }> = (props) => {
-  const MainLinkDiv = styled.a`
-    padding: 0.5em;
-    background-color: ${props.color ? props.color : "rgba(255,255,255,0.2)"};
-    border-radius: 1em;
-    margin: 1em;
-    text-align: center;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    box-shadow: 0px 8px 24px var(--background2);
-    @media (prefers-color-scheme: dark) {
-      box-shadow: 0px 8px 24px var(--background2-dark);
-    }
-    border: 2px solid gray;
-
-    &:hover {
-      transform: scale(1.03);
-    }
-    &:active {
-      transfrom: translateY(2px);
-    }
-    transition: all 100ms;
-  `; // TODO: make transitions ssprings
-
   return (
-    <MainLinkDiv href={props.url} target="_blank">
+    <MainLinkDiv href={props.url} data-color={props.color} target="_blank">
       <label style={{ cursor: "pointer" }}>{props.text}</label>
       {props.imgSrc && <StyledImg src={props.imgSrc} />}
     </MainLinkDiv>
