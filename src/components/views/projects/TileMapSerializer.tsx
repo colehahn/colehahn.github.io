@@ -11,9 +11,6 @@ const StyledTable = styled.table`
   margin: 1em 0;
   border: 1px solid;
   background-color: var(--background);
-  @media (prefers-color-scheme: dark) {
-    background-color: var(background-dark);
-  }
   text-align: center;
   & thead tr th {
     border-left: 1px solid;

@@ -6,13 +6,7 @@ import { useRouter } from "next/router";
 
 const HeaderDiv = styled.div`
   padding-bottom: calc(12vh * 0.05);
-  background: linear-gradient(var(--primary) 95%, var(background2) 100%);
-  @media (prefers-color-scheme: dark) {
-    background: linear-gradient(
-      var(--primary) 95%,
-      var(--background2-dark) 100%
-    );
-  }
+  background: linear-gradient(var(--primary) 95%, var(--background2) 100%);
   min-height: 12vh;
   position: relative;
   display: flex;

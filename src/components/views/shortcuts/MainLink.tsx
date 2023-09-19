@@ -20,9 +20,6 @@ const MainLinkDiv = styled.a`
   align-items: center;
 
   box-shadow: 0px 8px 24px var(--background2);
-  @media (prefers-color-scheme: dark) {
-    box-shadow: 0px 8px 24px var(--background2-dark);
-  }
   border: 2px solid gray;
 
   &:hover {

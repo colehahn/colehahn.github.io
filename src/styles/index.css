@@ -1,11 +1,11 @@
 :root {
   --primary: rgb(53, 124, 127);
-  --background: rgb(204, 215, 197);
-  --background2: lightgray;
-  --background-dark: #303030;
-  --background2-dark: #464646;
-  --text-dark: lightgray;
+  --background: #303030;
+  --background2: #464646;
+  --text: lightgray;
   --accent: rgba(226, 109, 92, 0.5);
+  --transparent: rgba(255, 255, 255, 0.1);
+  --transparent-more-opaque: rgba(255, 255, 255, 0.2);
 }
 
 body {

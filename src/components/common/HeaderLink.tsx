@@ -14,13 +14,7 @@ const StyledLink = styled.a`
   background-color: ${(propss: any) =>
     propss[`data-currentpage`] === propss[`data-to`]
       ? "var(--accent)"
-      : `rgba(255, 255, 255, 0.2)`};
-  @media (prefers-color-scheme: dark) {
-    background-color: ${(propss: any) =>
-      propss[`data-currentpage`] === propss[`data-to`]
-        ? `var(--accent)`
-        : `rgba(0, 0, 0, 0.2)`};
-  }
+      : `var(--transparent-more-opaque)`};
   height: max-content;
 
   transition: background-color 300ms;
@@ -28,13 +22,7 @@ const StyledLink = styled.a`
     background-color: ${(propss: any) =>
       propss[`data-currentpage`] === propss[`data-to`]
         ? `var(--accent)`
-        : `rgba(255, 255, 255, 0.1)`};
-    @media (prefers-color-scheme: dark) {
-      background-color: ${(propss: any) =>
-        propss[`data-currentpage`] === propss[`data-to`]
-          ? `var(--accent)`
-          : `rgba(0, 0, 0, 0.1)`};
-    }
+        : `var(--transparent)`};
   }
 `;
 

@@ -5,14 +5,13 @@ import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import { device } from "../utils/device";
 import "../styles/gradient-border.css";
+import { themes, setTheme } from "../pages/settings";
 
 const AppDiv = styled.div`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  @media (prefers-color-scheme: dark) {
-    color: var(--text-dark);
-  }
+  color: var(--text);
 `;
 
 const ComponentDiv = styled.div`
@@ -23,14 +22,6 @@ const ComponentDiv = styled.div`
     var(--background) 80%,
     var(--background2) 100%
   );
-  @media (prefers-color-scheme: dark) {
-    background: linear-gradient(
-      var(--background2-dark) 0%,
-      var(--background-dark) 20%,
-      var(--background-dark) 80%,
-      var(--background2-dark) 100%
-    );
-  }
   padding-left: 5vw;
   padding-right: 5vw;
   overflow: hidden;
@@ -57,6 +48,37 @@ const ComponentDiv = styled.div`
     margin-right: auto;
   }
 `;
+
+if (typeof window !== "undefined") {
+  window.onload = () => {
+    const themeIndex = localStorage.getItem("themeIndex");
+    if (typeof themeIndex !== "undefined" && themeIndex !== null) {
+      // user has selected a theme
+      setTheme(parseInt(themeIndex));
+    } else if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: light)").matches
+    ) {
+      // user wants light mode
+      setTheme(themes.findIndex((theme) => theme.name === "light"));
+    } else {
+      setTheme(themes.findIndex((theme) => theme.name === "dark"));
+    }
+
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", function (e) {
+        if (
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: light)").matches
+        ) {
+          setTheme(themes.findIndex((theme) => theme.name === "light"));
+        } else {
+          setTheme(themes.findIndex((theme) => theme.name === "dark"));
+        }
+      });
+  };
+}
 
 export default function MyApp({ Component, pageProps }) {
   return (

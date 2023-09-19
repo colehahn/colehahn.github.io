@@ -5,10 +5,7 @@ import { BiCopy } from "react-icons/bi";
 const borderRadius = "1em";
 
 const Wrapper = styled.div`
-  background: rgba(0, 0, 0, 0.1);
-  @media (prefers-color-scheme: dark) {
-    background: rgba(255, 255, 255, 0.1);
-  }
+  background: var(--transparent);
   font-family: monospace;
   //max-width: fit-content;
   width: 100%;
@@ -36,10 +33,7 @@ const Wrapper = styled.div`
 `;
 
 const TitleWrapper = styled.div`
-  background: rgba(0, 0, 0, 0.1);
-  @media (prefers-color-scheme: dark) {
-    background: rgba(255, 255, 255, 0.1);
-  }
+  background: var(--transparent);
   padding-left: 2em;
   border: 1px solid transparent; //hmmm.. this definitely isn't right
   border-radius: ${borderRadius};
@@ -82,9 +76,6 @@ const StyledIcon = styled(BiCopy)`
 const CopiedLabel = styled.label`
   border: 1px solid;
   background-color: var(--background);
-  @media (prefers-color-scheme: dark) {
-    background-color: var(--background-dark);
-  }
   position: relative;
   top: 1em;
 `;

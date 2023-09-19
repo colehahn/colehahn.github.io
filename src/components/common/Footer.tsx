@@ -2,10 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const FooterDiv = styled.div`
-  background: linear-gradient(var(--background2) 0%, --var(--primary) 10%);
-  @media (prefers-color-scheme: dark) {
-    background: linear-gradient(var(--background2-dark) 0%, var(--primary) 10%);
-  }
+  background: linear-gradient(var(--background2) 0%, var(--primary) 10%);
   text-align: center;
 `;
 

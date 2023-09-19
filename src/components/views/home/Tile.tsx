@@ -7,9 +7,6 @@ const TileDiv = styled.button`
   font-family: inherit;
 
   background-color: var(--background2);
-  @media (prefers-color-scheme: dark) {
-    background-color: var(--background2-dark);
-  }
   min-width: 15vw;
   padding: 10px 20px;
   margin: 10px;
