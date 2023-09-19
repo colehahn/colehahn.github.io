@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { useRouter } from "next/router";
 
 const StyledLink = styled.a`
   //margin: 20px;
@@ -31,7 +30,6 @@ export const HeaderLink: React.FC<{
   to: string;
   label: any;
 }> = (props) => {
-  const router = useRouter();
   return (
     <StyledLink
       data-currentpage={props.currentPage}
