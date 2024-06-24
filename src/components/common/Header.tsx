@@ -70,6 +70,11 @@ export const Header: React.FC = () => {
           />
           <HeaderLink
             currentPage={props.currentPage}
+            to="/dashboard"
+            label="Flood Watch"
+          />
+          <HeaderLink
+            currentPage={props.currentPage}
             to="/about"
             label="About Me"
           />
