@@ -24,8 +24,8 @@ const RecipePhoto = styled.a`
 export const Recipe: React.FC<{
   name: string;
   description: string;
-  imgSrc: any;
-  url: string;
+  imgSrc?: string;
+  url?: string;
 }> = (props) => {
   return (
     <RecipeDiv>
@@ -33,9 +33,11 @@ export const Recipe: React.FC<{
         <h5>{props.name}</h5>
         <p>{props.description}</p>
       </RecipeText>
-      <RecipePhoto href={props.url} target="_blank">
-        <StyledImg src={props.imgSrc} />
-      </RecipePhoto>
+      {props.imgSrc && props.url && (
+        <RecipePhoto href={props.url} target="_blank">
+          <StyledImg src={props.imgSrc} />
+        </RecipePhoto>
+      )}
     </RecipeDiv>
   );
 };

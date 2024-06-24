@@ -75,6 +75,11 @@ export const Header: React.FC = () => {
           />
           <HeaderLink
             currentPage={props.currentPage}
+            to="/eats"
+            label="What's Cooking?"
+          />
+          <HeaderLink
+            currentPage={props.currentPage}
             to="/about"
             label="About Me"
           />
@@ -84,11 +89,6 @@ export const Header: React.FC = () => {
   );
 };
 /*
-          <HeaderLink
-            currentPage={props.currentPage}
-            to="/food"
-            label="What's Cooking?"
-          />
           <HeaderLink
             currentPage={props.currentPage}
             to="/photos"
