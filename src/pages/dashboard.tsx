@@ -12,16 +12,10 @@ export const Dashboard: React.FC = () => {
       <h3>Dashboard</h3>
       <p>Here are some graphs to monitor river levels.</p>
       <a
-        href="https://water.weather.gov/ahps2/hydrograph.php?wfo=sew&gage=sncw1"
+        href="https://water.weather.gov/ahps2/hydrograph.php?wfo=sew&gage=snzw1"
         target="_blank"
       >
-        <StyledImg src="https://water.weather.gov/resources/hydrographs/sncw1_hg.png"></StyledImg>
-      </a>
-      <a
-        href="https://water.weather.gov/ahps2/hydrograph.php?wfo=sew&gage=snfw1"
-        target="_blank"
-      >
-        <StyledImg src="https://water.weather.gov/resources/hydrographs/snfw1_hg.png"></StyledImg>
+        <StyledImg src="https://water.weather.gov/resources/hydrographs/snzw1_hg.png"></StyledImg>
       </a>
       <a
         href="https://water.weather.gov/ahps2/hydrograph.php?wfo=sew&gage=argw1"
