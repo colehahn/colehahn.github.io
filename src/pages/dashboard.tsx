@@ -15,13 +15,13 @@ export const Dashboard: React.FC = () => {
         href="https://water.weather.gov/ahps2/hydrograph.php?wfo=sew&gage=snzw1"
         target="_blank"
       >
-        <StyledImg src="https://water.weather.gov/resources/hydrographs/snzw1_hg.png"></StyledImg>
+        <StyledImg src="https://apps.ecology.wa.gov/ContinuousFlowAndWQ/StationData/Prod/05B090/05B090_STG_SD.PNG"></StyledImg>
       </a>
       <a
         href="https://water.weather.gov/ahps2/hydrograph.php?wfo=sew&gage=argw1"
         target="_blank"
       >
-        <StyledImg src="https://water.weather.gov/resources/hydrographs/argw1_hg.png"></StyledImg>
+        <StyledImg src="https://waterdata.usgs.gov/nwisweb/graph?agency_cd=USGS&site_no=12167000&parm_cd=00065&period=7"></StyledImg>
       </a>
     </div>
   );
